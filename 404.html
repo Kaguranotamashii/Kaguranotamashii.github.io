@@ -50,7 +50,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-04-30 10:29:37'
+  postUpdate: '2022-04-30 10:40:36'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -190,7 +190,7 @@
   }
 
   const getComment = () => {
-    const serverURL = 'https://a4ievWVy.api.lncldglobal.com'
+    const serverURL = 'https://uglz6tnj.api.lncldglobal.com'
 
     var settings = {
       "method": "GET",
@@ -201,7 +201,7 @@
       },
     }
 
-    fetch(`${serverURL}/1.1/classes/Comment?limit=&order=-createdAt`,settings)
+    fetch(`${serverURL}/1.1/classes/Comment?limit=5&order=-createdAt`,settings)
       .then(response => response.json())
       .then(data => {
         const valineArray = data.results.map(function (e) {
