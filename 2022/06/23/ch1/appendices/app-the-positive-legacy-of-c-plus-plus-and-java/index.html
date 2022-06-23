@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>神楽の魂的博客 | 神楽の魂的博客</title><meta name="author" content="神楽の魂"><meta name="copyright" content="神楽の魂"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="附录:C++和 Java 的优良传统 在各种讨论声中，有一些人认为 C++是一种设计糟糕的语言。 我认为理解 C++和 Java 语言的选择有助于了解更大的视角。  也就是说，我几乎不再使用 C++了。当我使用它的时候，要么是用来检查遗留代码，要么是编写性能关键（performance-critical）部分，程序通常尽可能小，以便用其他语言编写的其他程序来调用。 因为我在最初的 8 年里一直在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神楽の魂的博客">
+<meta property="og:url" content="http://example.com/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/index.html">
+<meta property="og:site_name" content="神楽の魂的博客">
+<meta property="og:description" content="附录:C++和 Java 的优良传统 在各种讨论声中，有一些人认为 C++是一种设计糟糕的语言。 我认为理解 C++和 Java 语言的选择有助于了解更大的视角。  也就是说，我几乎不再使用 C++了。当我使用它的时候，要么是用来检查遗留代码，要么是编写性能关键（performance-critical）部分，程序通常尽可能小，以便用其他语言编写的其他程序来调用。 因为我在最初的 8 年里一直在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png">
+<meta property="article:published_time" content="2022-06-23T15:31:23.694Z">
+<meta property="article:modified_time" content="2019-12-21T09:17:24.000Z">
+<meta property="article:author" content="神楽の魂">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '神楽の魂的博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-12-21 17:17:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="神楽の魂的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051125484.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">神楽の魂的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-23T15:31:23.694Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-12-21T09:17:24.000Z" title="更新于 2019-12-21 17:17:24">2019-12-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png');"></div><article class="post-content" id="article-container"><h1 id="附录-C-和-Java-的优良传统"><a href="#附录-C-和-Java-的优良传统" class="headerlink" title="附录:C++和 Java 的优良传统"></a>附录:C++和 Java 的优良传统</h1><blockquote>
+<p>在各种讨论声中，有一些人认为 C++是一种设计糟糕的语言。 我认为理解 C++和 Java 语言的选择有助于了解更大的视角。</p>
+</blockquote>
+<p>也就是说，我几乎不再使用 C++了。当我使用它的时候，要么是用来检查遗留代码，要么是编写性能关键（performance-critical）部分，程序通常尽可能小，以便用其他语言编写的其他程序来调用。</p>
+<p>因为我在最初的 8 年里一直在 C++标准委员会工作，所以我见证了那些被做出的决定。它们都经过了极其谨慎的考虑，远远超过了许多在 Java 中做出的决定。</p>
+<p>然而，正如人们正确地指出的那样，由此产生的语言使用起来既复杂又痛苦，而且只要我一段时间不使用它，我就会忘记那些古怪的规则。在我写书的时候，我是从第一原理（first principles）处了解这些规则的，而不是记住了它们。</p>
+<p>为了理解 C++语言为何既令人不愉快且复杂，同时又是精心设计的，必须要牢记 C++中所有内容的主要设计决策：与 C. Bjarne Stroustrup（该语言的创造者，即“C++之父”）的兼容性决定。这样的设计似乎是为了可以让大量的 C 程序员透明地转移到对象（代指 C++）上：允许他们在 C++下编译他们的 C 代码。这是一个巨大的限制，一直是 C++最大的优势……而且也是它的祸根。这就是使得 C++成功的原因，也是使它复杂的原因。</p>
+<p>它也欺骗了那些不太了解 C++的 Java 设计师。例如，他们认为运算符重载对于程序员来说很难正确使用。这在 C++中基本上是正确的，因为 C++既有栈分配又有堆分配，你必须重载运算符来处理所有情况而且不要造成内存泄漏。这确实很困难。然而，Java 有单一的内存分配机制和一个垃圾收集器，这使得运算符重载变得微不足道，正如 C＃中那样（但在早于 Java 的 Python 中已经可以看到）。但多年来，来自 Java 团队的一贯态度是“运算符重载太复杂了”。这里还有许多决策，所做的事明显不应该是他们做的。正是由于这些原因，让我有了蔑视 Gosling（即“Java 之父”）和 Java 团队决策的名声。（Java 7 和 8 由于某种原因包含了更好的决策。但是向后兼容性这个约束总是会阻碍真正的改进。语言永远不会是它本来的样子。）</p>
+<p>还有很多其他的例子。“为了提高效率，必须包含基本类型”；坚持“万物皆对象”是正确的；当对性能有要求的时候，提供一个陷阱门（trap door）来做低级别的活动（lower-level activities）（这里也可以使用 hotspot 技术透明地提高性能，正如他们最终做的那样）；不能直接使用浮点处理器去计算超越函数，它用软件来完成。我已经尽可能多地提出了这样的问题，但我得到的却一直是类似“这是 Java 方式”这样的回复。</p>
+<p>当我提出关于泛型的设计有多糟糕的时候，我得到了相同的回复，以及“我们必须向后兼容那样以前用 Java 做出的决策”（即使它们是糟糕的决策）。最近越来越多的人已经获得了足够的泛型经验，可以发现泛型真的很难用。事实上，C++模板更强大、更一致（现在更容易使用，因为编译器的错误消息是可以容忍的）。人们一直在认真对待物化（reification），这可能是有用的东西，但是在那种被严格约束所削弱的设计中并没有多大影响。</p>
+<p>这样的例子还有很多很多。这是否意味着 Java 失败了？绝对不。Java 将程序员的主流带入了垃圾收集、虚拟机和一致的错误处理模型的世界。由于它的所有缺陷，它将我们提升到了一个水平，现在我们已经准备好使用更高级别的语言了。</p>
+<p>有一点，C++是领先的语言，人们认为它总是如此。许多人对 Java 有同样的看法，但由于 JVM，Java 使得取代自己变得更加容易。现在有可能会有人创建一种新语言，并使其在短时间内像 Java 一样高效运行。以前，为新语言开发一个正确有效的编译器需要花费大部分开发时间。</p>
+<p>这种情况已经发生了，包括像 Scala 这样的高级静态语言，以及动态语言，新的且可移植的，如 Groovy，Clojure，JRuby 和 Jython。这是未来，并且过渡很顺畅，因为可以很轻易地将这些新语言与现有 Java 代码结合使用，并且必要时可以重写那些在 Java 中的瓶颈。</p>
+<p>在撰写本文时，Java 是世界上的头号编程语言。然而，Java 最终将会减弱，就像 C++一样，沦只在特殊情况下使用（或者只是用来支持传统的代码，因为它不能像 C++那样和硬件连接）。但是无意中的好处，也是 Java 真正意外的光彩之处在于它为自己的替代品创造了一条非常畅通的道路，即使 Java 本身已经达到了无法再发展的程度。未来所有的语言都应该从中学习：要么创建一个可以重构的文化（像 Python 和 Ruby 做的那样），要么就让竞争者茁壮成长。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png"></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/23/ch1/appendices/app-supplements/"><img class="prev-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/06/23/ch1/appendices/app-understanding-equals-and-hashcode/"><img class="next-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051125484.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">神楽の魂</div><div class="author-info__description">吾魂兮无求乎永生,竭尽兮人事之所</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/kaguranotamashii"><i class="fab fa-github"></i><span>关注我！</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kaguranotamashii" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/36216184?spm_id_from=..0.0" target="_blank" title=""><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是神楽の魂的个人博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95-C-%E5%92%8C-Java-%E7%9A%84%E4%BC%98%E8%89%AF%E4%BC%A0%E7%BB%9F"><span class="toc-number">1.</span> <span class="toc-text">附录:C++和 Java 的优良传统</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-understanding-equals-and-hashcode/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-understanding-equals-and-hashcode/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.696Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.694Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-supplements/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-supplements/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.692Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-standard-io/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/05ad55062a8ab0719bf63ae2cae8ede4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-standard-io/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.691Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-programming-guidelines/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/f78266863bfe20d7faf574344b851e80.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-programming-guidelines/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.689Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">©2021 - 2022 By 神楽の魂</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来到我的博客</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'a4ievWVyntWNzMxlRLb4AT19-gzGzoHsz',
+      appKey: 'Gpt3cTF0rksKNDbe1jWxbIDc',
+      avatar: 'monsterid',
+      serverURLs: 'https://a4ievwvy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+
+      master: 'a8a608cbb951a2e4fd0cc2b23b12c79d'.split(','),
+      friends: ''.split(','),
+      tagMeta: '博主,小伙伴,访客'.split(','),
+
+      requiredFields: [],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/valine_f/valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="/js/modify.js"></script><script async="" data-pjax="" src="/js/randombg.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax="" src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax="">
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?Kaguranotamashii";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="Kaguranotamashii";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax="">
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax="" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.js"></script><script async="" src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

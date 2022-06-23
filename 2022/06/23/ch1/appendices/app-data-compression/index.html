@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>神楽の魂的博客 | 神楽の魂的博客</title><meta name="author" content="神楽の魂"><meta name="copyright" content="神楽の魂"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="附录:数据压缩Java I/O 类库提供了可以读写压缩格式流的类。你可以将其他 I/O 类包装起来用于提供压缩功能。 这些类不是从 Reader 和 Writer 类派生的，而是 InputStream 和 OutputStream 层级结构的一部分。这是由于压缩库处理的是字节，而不是字符。但是，你可能会被迫混合使用两种类型的流（请记住，你可以使用 InputStreamReader 和 Outp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神楽の魂的博客">
+<meta property="og:url" content="http://example.com/2022/06/23/ch1/appendices/app-data-compression/index.html">
+<meta property="og:site_name" content="神楽の魂的博客">
+<meta property="og:description" content="附录:数据压缩Java I/O 类库提供了可以读写压缩格式流的类。你可以将其他 I/O 类包装起来用于提供压缩功能。 这些类不是从 Reader 和 Writer 类派生的，而是 InputStream 和 OutputStream 层级结构的一部分。这是由于压缩库处理的是字节，而不是字符。但是，你可能会被迫混合使用两种类型的流（请记住，你可以使用 InputStreamReader 和 Outp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/fb2f0227e29b51f33cb9f67dbc4503ba.jpg">
+<meta property="article:published_time" content="2022-06-23T15:31:23.679Z">
+<meta property="article:modified_time" content="2019-12-21T09:17:24.000Z">
+<meta property="article:author" content="神楽の魂">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/fb2f0227e29b51f33cb9f67dbc4503ba.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/06/23/ch1/appendices/app-data-compression/"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '神楽の魂的博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2019-12-21 17:17:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="神楽の魂的博客" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051125484.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/fb2f0227e29b51f33cb9f67dbc4503ba.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">神楽の魂的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-23T15:31:23.679Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2019-12-21T09:17:24.000Z" title="更新于 2019-12-21 17:17:24">2019-12-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/fb2f0227e29b51f33cb9f67dbc4503ba.jpg');"></div><article class="post-content" id="article-container"><h1 id="附录-数据压缩"><a href="#附录-数据压缩" class="headerlink" title="附录:数据压缩"></a>附录:数据压缩</h1><p>Java I/O 类库提供了可以读写压缩格式流的类。你可以将其他 I/O 类包装起来用于提供压缩功能。</p>
+<p>这些类不是从 <strong>Reader</strong> 和 <strong>Writer</strong> 类派生的，而是 <strong>InputStream</strong> 和 <strong>OutputStream</strong> 层级结构的一部分。这是由于压缩库处理的是字节，而不是字符。但是，你可能会被迫混合使用两种类型的流（请记住，你可以使用 <strong>InputStreamReader</strong> 和 <strong>OutputStreamWriter</strong>，这两个类可以在字节类型和字符类型之间轻松转换）。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>压缩类</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CheckedInputStream</strong></td>
+<td><code>getCheckSum()</code> 可以对任意 <strong>InputStream</strong> 计算校验和（而不只是解压）</td>
+</tr>
+<tr>
+<td><strong>CheckedOutputStream</strong></td>
+<td><code>getCheckSum()</code> 可以对任意 <strong>OutputStream</strong> 计算校验和（而不只是压缩）</td>
+</tr>
+<tr>
+<td><strong>DeflaterOutputStream</strong></td>
+<td>压缩类的基类</td>
+</tr>
+<tr>
+<td><strong>ZipOutputStream</strong></td>
+<td><strong>DeflaterOutputStream</strong> 类的一种，用于压缩数据到 Zip 文件结构</td>
+</tr>
+<tr>
+<td><strong>GZIPOutputStream</strong></td>
+<td><strong>DeflaterOutputStream</strong> 类的一种，用于压缩数据到 GZIP 文件结构</td>
+</tr>
+<tr>
+<td><strong>InflaterInputStream</strong></td>
+<td>解压类的基类</td>
+</tr>
+<tr>
+<td><strong>ZipInputStream</strong></td>
+<td><strong>InflaterInputStream</strong> 类的一种，用于解压 Zip 文件结构的数据</td>
+</tr>
+<tr>
+<td><strong>GZIPInputStream</strong></td>
+<td><strong>InflaterInputStream</strong> 类的一种，用于解压 GZIP 文件结构的数据</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>尽管存在很多压缩算法，但是 Zip 和 GZIP 可能是最常见的。你可以使用许多用于读取和写入这些格式的工具，来轻松操作压缩数据。</p>
+<h2 id="使用-Gzip-简单压缩"><a href="#使用-Gzip-简单压缩" class="headerlink" title="使用 Gzip 简单压缩"></a>使用 Gzip 简单压缩</h2><p>GZIP 接口十分简单，因此当你有一个需要压缩的数据流（而不是一个包含不同数据分片的容器）时，使用 GZIP 更为合适。如下是一个压缩单个文件的示例：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// compression/GZIPcompress.java</span></span><br><span class="line"><span class="comment">// (c)2017 MindView LLC: see Copyright.txt</span></span><br><span class="line"><span class="comment">// We make no guarantees that this code is fit for any purpose.</span></span><br><span class="line"><span class="comment">// Visit http://OnJava8.com for more book information.</span></span><br><span class="line"><span class="comment">// {java GZIPcompress GZIPcompress.java}</span></span><br><span class="line"><span class="comment">// {VisuallyInspectOutput}</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GZIPcompress</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span> (args.length == <span class="number">0</span>) {</span><br><span class="line">            System.out.println(</span><br><span class="line">                    <span class="string">"Usage: \nGZIPcompress file\n"</span> +</span><br><span class="line">                            <span class="string">"\tUses GZIP compression to compress "</span> +</span><br><span class="line">                            <span class="string">"the file to test.gz"</span>);</span><br><span class="line">            System.exit(<span class="number">1</span>);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">try</span> (</span><br><span class="line">                InputStream in = <span class="keyword">new</span> BufferedInputStream(</span><br><span class="line">                        <span class="keyword">new</span> FileInputStream(args[<span class="number">0</span>]));</span><br><span class="line">                BufferedOutputStream out =</span><br><span class="line">                        <span class="keyword">new</span> BufferedOutputStream(</span><br><span class="line">                                <span class="keyword">new</span> GZIPOutputStream(</span><br><span class="line">                                        <span class="keyword">new</span> FileOutputStream(<span class="string">"test.gz"</span>)))</span><br><span class="line">        ) {</span><br><span class="line">            System.out.println(<span class="string">"Writing file"</span>);</span><br><span class="line">            <span class="keyword">int</span> c;</span><br><span class="line">            <span class="keyword">while</span> ((c = in.read()) != -<span class="number">1</span>)</span><br><span class="line">                out.write(c);</span><br><span class="line">        } <span class="keyword">catch</span> (IOException e) {</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">        System.out.println(<span class="string">"Reading file"</span>);</span><br><span class="line">        <span class="keyword">try</span> (</span><br><span class="line">                BufferedReader in2 = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">                        <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> GZIPInputStream(</span><br><span class="line">                                <span class="keyword">new</span> FileInputStream(<span class="string">"test.gz"</span>))))</span><br><span class="line">        ) {</span><br><span class="line">            in2.lines().forEach(System.out::println);</span><br><span class="line">        } <span class="keyword">catch</span> (IOException e) {</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>使用压缩类非常简单，你只需要把你的输出流包装在 <strong>GZIPOutputStream</strong> 或 <strong>ZipOutputStream</strong> 中，将输入流包装在 <strong>GZIPInputStream</strong> 或 <strong>ZipInputStream</strong>。其他的一切就只是普通的 I/O 读写。这是面向字符流和面向字节流的混合示例；in 使用 Reader 类，而 <strong>GZIPOutputStreams</strong> 构造函数只能接受 <strong>OutputStream</strong> 对象，而不能接受 <strong>Writer</strong> 对象。当打开文件的时候，<strong>GZIPInputStream</strong> 会转换成为 <strong>Reader</strong>。</p>
+<h2 id="使用-zip-多文件存储"><a href="#使用-zip-多文件存储" class="headerlink" title="使用 zip 多文件存储"></a>使用 zip 多文件存储</h2><p>支持 Zip 格式的库比 GZIP 库更广泛。有了它，你可以轻松存储多个文件，甚至还有一个单独的类可以轻松地读取 Zip 文件。该库使用标准 Zip 格式，因此它可以与当前可在 Internet 上下载的所有 Zip 工具无缝协作。以下示例与前一个示例具有相同的形式，但它可以根据需要处理任意数量的命令行参数。此外，它还显示了 <strong>Checksum</strong> 类计算和验证文件的校验和。有两种校验和类型：Adler32（更快）和 CRC32（更慢但更准确）。</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// compression/ZipCompress.java</span></span><br><span class="line"><span class="comment">// (c)2017 MindView LLC: see Copyright.txt</span></span><br><span class="line"><span class="comment">// We make no guarantees that this code is fit for any purpose.</span></span><br><span class="line"><span class="comment">// Visit http://OnJava8.com for more book information.</span></span><br><span class="line"><span class="comment">// Uses Zip compression to compress any</span></span><br><span class="line"><span class="comment">// number of files given on the command line</span></span><br><span class="line"><span class="comment">// {java ZipCompress ZipCompress.java}</span></span><br><span class="line"><span class="comment">// {VisuallyInspectOutput}</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZipCompress</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">try</span> (</span><br><span class="line">                FileOutputStream f =</span><br><span class="line">                        <span class="keyword">new</span> FileOutputStream(<span class="string">"test.zip"</span>);</span><br><span class="line">                CheckedOutputStream csum =</span><br><span class="line">                        <span class="keyword">new</span> CheckedOutputStream(f, <span class="keyword">new</span> Adler32());</span><br><span class="line">                ZipOutputStream zos = <span class="keyword">new</span> ZipOutputStream(csum);</span><br><span class="line">                BufferedOutputStream out =</span><br><span class="line">                        <span class="keyword">new</span> BufferedOutputStream(zos)</span><br><span class="line">        ) {</span><br><span class="line">            zos.setComment(<span class="string">"A test of Java Zipping"</span>);</span><br><span class="line">            <span class="comment">// No corresponding getComment(), though.</span></span><br><span class="line">            <span class="keyword">for</span> (String arg : args) {</span><br><span class="line">                System.out.println(<span class="string">"Writing file "</span> + arg);</span><br><span class="line">                <span class="keyword">try</span> (</span><br><span class="line">                        InputStream in = <span class="keyword">new</span> BufferedInputStream(</span><br><span class="line">                                <span class="keyword">new</span> FileInputStream(arg))</span><br><span class="line">                ) {</span><br><span class="line">                    zos.putNextEntry(<span class="keyword">new</span> ZipEntry(arg));</span><br><span class="line">                    <span class="keyword">int</span> c;</span><br><span class="line">                    <span class="keyword">while</span> ((c = in.read()) != -<span class="number">1</span>)</span><br><span class="line">                        out.write(c);</span><br><span class="line">                }</span><br><span class="line">                out.flush();</span><br><span class="line">            }</span><br><span class="line">            <span class="comment">// Checksum valid only after the file is closed!</span></span><br><span class="line">            System.out.println(</span><br><span class="line">                    <span class="string">"Checksum: "</span> + csum.getChecksum().getValue());</span><br><span class="line">        } <span class="keyword">catch</span> (IOException e) {</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">        <span class="comment">// Now extract the files:</span></span><br><span class="line">        System.out.println(<span class="string">"Reading file"</span>);</span><br><span class="line">        <span class="keyword">try</span> (</span><br><span class="line">                FileInputStream fi =</span><br><span class="line">                        <span class="keyword">new</span> FileInputStream(<span class="string">"test.zip"</span>);</span><br><span class="line">                CheckedInputStream csumi =</span><br><span class="line">                        <span class="keyword">new</span> CheckedInputStream(fi, <span class="keyword">new</span> Adler32());</span><br><span class="line">                ZipInputStream in2 = <span class="keyword">new</span> ZipInputStream(csumi);</span><br><span class="line">                BufferedInputStream bis =</span><br><span class="line">                        <span class="keyword">new</span> BufferedInputStream(in2)</span><br><span class="line">        ) {</span><br><span class="line">            ZipEntry ze;</span><br><span class="line">            <span class="keyword">while</span> ((ze = in2.getNextEntry()) != <span class="keyword">null</span>) {</span><br><span class="line">                System.out.println(<span class="string">"Reading file "</span> + ze);</span><br><span class="line">                <span class="keyword">int</span> x;</span><br><span class="line">                <span class="keyword">while</span> ((x = bis.read()) != -<span class="number">1</span>)</span><br><span class="line">                    System.out.write(x);</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">if</span> (args.length == <span class="number">1</span>)</span><br><span class="line">                System.out.println(</span><br><span class="line">                        <span class="string">"Checksum: "</span> + csumi.getChecksum().getValue());</span><br><span class="line">        } <span class="keyword">catch</span> (IOException e) {</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">        <span class="comment">// Alternative way to open and read Zip files:</span></span><br><span class="line">        <span class="keyword">try</span> (</span><br><span class="line">                ZipFile zf = <span class="keyword">new</span> ZipFile(<span class="string">"test.zip"</span>)</span><br><span class="line">        ) {</span><br><span class="line">            Enumeration e = zf.entries();</span><br><span class="line">            <span class="keyword">while</span> (e.hasMoreElements()) {</span><br><span class="line">                ZipEntry ze2 = (ZipEntry) e.nextElement();</span><br><span class="line">                System.out.println(<span class="string">"File: "</span> + ze2);</span><br><span class="line">                <span class="comment">// ... and extract the data as before</span></span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">catch</span> (IOException e) {</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>对于要添加到存档的每个文件，必须调用 <code>putNextEntry()</code> 并传递 <strong>ZipEntry</strong> 对象。 <strong>ZipEntry</strong> 对象包含一个扩展接口，用于获取和设置 Zip 文件中该特定条目的所有可用数据：名称，压缩和未压缩大小，日期，CRC 校验和，额外字段数据，注释，压缩方法以及它是否是目录条目。但是，即使 Zip 格式有设置密码的方法，Java 的 Zip 库也不支持。虽然 <strong>CheckedInputStream</strong> 和 <strong>CheckedOutputStream</strong> 都支持 Adler32 和 CRC32 校验和，但 <strong>ZipEntry</strong> 类仅支持 CRC 接口。这是对基础 Zip 格式的限制，但它可能会限制你使用更快的 Adler32。</p>
+<p>要提取文件，<strong>ZipInputStream</strong> 有一个 <code>getNextEntry()</code> 方法，这个方法在有文件存在的情况下调用，会返回下一个 <strong>ZipEntry</strong>。作为一个更简洁的替代方法，你可以使用 <strong>ZipFile</strong> 对象读取该文件，该对象具有方法 entries() 返回一个包裹 <strong>ZipEntries</strong> 的 <strong>Enumeration</strong>。</p>
+<p>要读取校验和，你必须以某种方式访问关联的 <strong>Checksum</strong> 对象。这里保留了对 <strong>CheckedOutputStream</strong> 和 <strong>CheckedInputStream</strong> 对象的引用，但你也可以保持对 <strong>Checksum</strong> 对象的引用。 Zip 流中的一个令人困惑的方法是 <code>setComment()</code>。如 <strong>ZipCompress</strong> 所示。在 Java 中，你可以在编写文件时设置注释，但是没有办法恢复 <strong>ZipInputStream</strong> 中的注释。注释似乎仅通过 <strong>ZipEntry</strong> 在逐个条目的基础上完全支持。</p>
+<p>使用 GZIP 或 Zip 库时，你不仅被限制于文件——你可以压缩任何内容，包括通过网络连接发送的数据。</p>
+<h2 id="Java-的-jar"><a href="#Java-的-jar" class="headerlink" title="Java 的 jar"></a>Java 的 jar</h2><p>Zip 格式也用于 JAR（Java ARchive）文件格式，这是一种将一组文件收集到单个压缩文件中的方法，就像 Zip 一样。但是，与 Java 中的其他所有内容一样，JAR 文件是跨平台的，因此你不必担心平台问题。你还可以将音频和图像文件像类文件一样包含在其中。</p>
+<p>JAR 文件由一个包含压缩文件集合的文件和一个描述它们的“清单（manifest）”组成。（你可以创建自己的清单文件；否则，jar 程序将为你执行此操作。）你可以在 JDK 文档中，找到更多关于 JAR 清单的信息。</p>
+<p>JDK 附带的 jar 工具会自动压缩你选择的文件。你可以在命令行上调用它：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar [options] destination [manifest] inputfile(s)</span><br></pre></td></tr></tbody></table></figure>
+<p>选项是一组字母（不需要连字符或任何其他指示符）。 Unix / Linux 用户会注意到这些选项与 tar 命令选项的相似性。这些是：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>c</strong></td>
+<td>创建一个新的或者空的归档文件</td>
+</tr>
+<tr>
+<td><strong>t</strong></td>
+<td>列出内容目录</td>
+</tr>
+<tr>
+<td><strong>x</strong></td>
+<td>提取所有文件</td>
+</tr>
+<tr>
+<td><strong>x</strong> file</td>
+<td>提取指定的文件</td>
+</tr>
+<tr>
+<td><strong>f</strong></td>
+<td>这代表着，“传递文件的名称。”如果你不使用它，jar 假定它的输入将来自标准输入，或者，如果它正在创建一个文件，它的输出将转到标准输出。</td>
+</tr>
+<tr>
+<td><strong>m</strong></td>
+<td>代表第一个参数是用户创建的清单文件的名称。</td>
+</tr>
+<tr>
+<td><strong>v</strong></td>
+<td>生成详细的输出用于表述 jar 所作的事情</td>
+</tr>
+<tr>
+<td><strong>0</strong></td>
+<td>仅存储文件;不压缩文件（用于创建放在类路径中的 JAR 文件）。</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>不要自动创建清单文件</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>如果放入 JAR 文件的文件中包含子目录，则会自动添加该子目录，包括其所有子目录等。还会保留路径信息。</p>
+<p>以下是一些调用 jar 的典型方法。以下命令创建名为 myJarFile 的 JAR 文件。 jar 包含当前目录中的所有类文件，以及自动生成的清单文件：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar cf myJarFile.jar *.class</span><br></pre></td></tr></tbody></table></figure>
+<p>下一个命令与前面的示例类似，但它添加了一个名为 myManifestFile.mf 的用户创建的清单文件。 ：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar cmf myJarFile.jar myManifestFile.mf *.class</span><br></pre></td></tr></tbody></table></figure>
+<p>这个命令输出了 myJarFile.jar 中的文件目录：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar tf myJarFile.jar</span><br></pre></td></tr></tbody></table></figure>
+<p>如下添加了一个“verbose”的标志，用于生成更多关于 myJarFile.jar 中文件的详细信息：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar tvf myJarFile.jar</span><br></pre></td></tr></tbody></table></figure>
+<p>假设 audio，classes 和 image 都是子目录，它将所有子目录组合到文件 myApp.jar 中。还包括“verbose”标志，以便在 jar 程序工作时提供额外的反馈：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jar cvf myApp.jar audio classes image</span><br></pre></td></tr></tbody></table></figure>
+<p>如果你在创建 JAR 文件时使用了 0（零） 选项，该文件将会被替换在你的类路径（CLASSPATH）中：</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLASSPATH="lib1.jar;lib2.jar;"</span><br></pre></td></tr></tbody></table></figure>
+<p>然后 Java 可以搜索到 lib1.jar 和 lib2.jar 的类文件。</p>
+<p>jar 工具不像 Zip 实用程序那样通用。例如，你无法将文件添加或更新到现有 JAR 文件；只能从头开始创建 JAR 文件。</p>
+<p>此外，你无法将文件移动到 JAR 文件中，在移动文件时将其删除。</p>
+<p>但是，在一个平台上创建的 JAR 文件可以通过任何其他平台上的 jar 工具透明地读取（这个问题有时会困扰 Zip 实用程序）。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/fb2f0227e29b51f33cb9f67dbc4503ba.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src="/img/wechat.png"></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/23/ch1/appendices/app-benefits-and-costs-of-static-type-checking/"><img class="prev-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/6294931695ca322491259a86865d0d76.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2022/06/23/ch1/appendices/app-io-streams/"><img class="next-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051125484.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"></div><div class="author-info__name">神楽の魂</div><div class="author-info__description">吾魂兮无求乎永生,竭尽兮人事之所</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">15</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/kaguranotamashii"><i class="fab fa-github"></i><span>关注我！</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kaguranotamashii" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/36216184?spm_id_from=..0.0" target="_blank" title=""><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">这是神楽の魂的个人博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.</span> <span class="toc-text">附录:数据压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Gzip-%E7%AE%80%E5%8D%95%E5%8E%8B%E7%BC%A9"><span class="toc-number">1.1.</span> <span class="toc-text">使用 Gzip 简单压缩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-zip-%E5%A4%9A%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8"><span class="toc-number">1.2.</span> <span class="toc-text">使用 zip 多文件存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E7%9A%84-jar"><span class="toc-number">1.3.</span> <span class="toc-text">Java 的 jar</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-understanding-equals-and-hashcode/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-understanding-equals-and-hashcode/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.696Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112801.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-the-positive-legacy-of-c-plus-plus-and-java/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.694Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-supplements/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/d9f183fe3211df28dc56521ba4533ed1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-supplements/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.692Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-standard-io/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/05ad55062a8ab0719bf63ae2cae8ede4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-standard-io/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.691Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/23/ch1/appendices/app-programming-guidelines/" title="无题"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/f78266863bfe20d7faf574344b851e80.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a><div class="content"><a class="title" href="/2022/06/23/ch1/appendices/app-programming-guidelines/" title="无题">无题</a><time datetime="2022-06-23T15:31:23.689Z" title="发表于 2022-06-23 23:31:23">2022-06-23</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">©2021 - 2022 By 神楽の魂</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来到我的博客</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'a4ievWVyntWNzMxlRLb4AT19-gzGzoHsz',
+      appKey: 'Gpt3cTF0rksKNDbe1jWxbIDc',
+      avatar: 'monsterid',
+      serverURLs: 'https://a4ievwvy.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+
+      master: 'a8a608cbb951a2e4fd0cc2b23b12c79d'.split(','),
+      friends: ''.split(','),
+      tagMeta: '博主,小伙伴,访客'.split(','),
+
+      requiredFields: [],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/valine_f/valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script src="/js/modify.js"></script><script async="" data-pjax="" src="/js/randombg.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax="" src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax="">
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?Kaguranotamashii";
+            var git_color =['#ebedf0', '#fdcdec', '#fc9bd9', '#fa6ac5', '#f838b2', '#f5089f', '#c4067e', '#92055e', '#540336', '#48022f', '#30021f'];
+            var git_user ="Kaguranotamashii";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax="">
+  function butterfly_clock_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_injector_config();
+  }
+  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax="" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.js"></script><script async="" src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
