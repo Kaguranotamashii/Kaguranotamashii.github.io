@@ -1477,8 +1477,6 @@ input::placeholder {
   background: url(https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/7c0034e75c1ac78966dac0b7d24e668a.jpeg);
   background-attachment: local;
   background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -3368,8 +3366,6 @@ h1.page-title + .tag-cloud-list {
   background: #49b1f5;
   background-attachment: scroll;
   background-position: bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
 }
 #footer:before {
@@ -3405,8 +3401,6 @@ h1.page-title + .tag-cloud-list {
   width: 100%;
   background-color: #49b1f5;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all 0.5s;
