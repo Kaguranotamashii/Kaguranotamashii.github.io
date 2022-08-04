@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>�������S�λ�Υ֥���</title>
+  <title>これは神楽の魂のブログ</title>
   
   
   <link href="https://kaguranotamashii.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://kaguranotamashii.github.io/</id>
   
   <author>
-    <name>��S�λ�</name>
+    <name>神楽の魂</name>
     
   </author>
   
@@ -40,8 +40,8 @@
   
   <entry>
     <title>MySql基础</title>
-    <link href="https://kaguranotamashii.github.io/2022/07/13/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/MySql%E5%9F%BA%E7%A1%80/"/>
-    <id>https://kaguranotamashii.github.io/2022/07/13/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/MySql%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://kaguranotamashii.github.io/2022/07/13/[main]CS/[main]computer-language/MySql%E5%9F%BA%E7%A1%80/"/>
+    <id>https://kaguranotamashii.github.io/2022/07/13/[main]CS/[main]computer-language/MySql%E5%9F%BA%E7%A1%80/</id>
     <published>2022-07-13T02:55:52.000Z</published>
     <updated>2022-07-28T16:34:39.141Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>算法基础笔记</title>
-    <link href="https://kaguranotamashii.github.io/2022/07/07/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"/>
-    <id>https://kaguranotamashii.github.io/2022/07/07/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://kaguranotamashii.github.io/2022/07/07/[main]CS/[main]Leetcode/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kaguranotamashii.github.io/2022/07/07/[main]CS/[main]Leetcode/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</id>
     <published>2022-07-07T07:03:07.000Z</published>
     <updated>2022-07-26T07:51:37.909Z</updated>
     
@@ -82,12 +82,12 @@
   
   <entry>
     <title>大一下学期总结</title>
-    <link href="https://kaguranotamashii.github.io/2022/07/07/[main]%E5%AE%9A%E6%9C%9F%E6%80%BB%E7%BB%93/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
-    <id>https://kaguranotamashii.github.io/2022/07/07/[main]%E5%AE%9A%E6%9C%9F%E6%80%BB%E7%BB%93/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/</id>
+    <link href="https://kaguranotamashii.github.io/2022/07/07/[main]summary/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
+    <id>https://kaguranotamashii.github.io/2022/07/07/[main]summary/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/</id>
     <published>2022-07-06T16:37:29.000Z</published>
-    <updated>2022-08-03T15:05:10.258Z</updated>
+    <updated>2022-08-04T03:58:46.037Z</updated>
     
-    <content type="html"><![CDATA[<p>没想到2022年就这样过去了一半，感叹时光飞逝之余，也回头回顾今年上半年的光阴是否虚度，遗憾固然存在，但也又一点点可以聊以自慰的成绩。</p><h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>学习了vue框架和javase，在学习前端的同时彻底爱上了vscode，以及有意思的开源插件。四月学前端的时候用原生js写了页love-letter，虽然被拒绝了，但是认识到了原生js的不方便之处后，又简单学习了jQuery，才意识到了js框架的便利之处。</p><p>这八个月只能说是大摆烂了</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803163308.png" alt="微软式幽默"></p><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803224901.png" alt=""></p><p>这八个月读了几本有趣的书</p><p>自己目前最喜欢的是法国作家<strong><a href="https://zh.m.wikipedia.org/zh-hans/阿尔贝·加缪">阿尔贝·加缪</a></strong></p><blockquote><p>“  今天，妈妈死了。也可能是昨天，我不知道。” </p><p>”现在我面对这个充满了星光与默示的夜，第一次向这个冷漠的世界敞开了我的心扉“</p><p> ——-加缪《局外人》</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803164016.png" alt=""></p><p>当在这八个月以来压抑的网课以及疫情防控的影响下，烦躁的内心终于静了下来，总能去做一些有艺术的事情，比如说，思考，读书，学习等。这本局外人是我读的印象最深刻的一本书。文章情节不复杂一个下午便能读完。</p><p>默尔索的行为真的是荒诞的吗？我想肯定有些部分是荒诞的，但是面对群众以及神职人员对于洗礼罪恶的喋喋不休，他并没有所打动，坚持用自己的语言表达对生活的热爱。他们虽然清醒地认识到人的脆弱和局限，以及世界和人生必然的荒谬，但他们却并没有被击垮，而是勇敢地面对，并努力地克服这种悲剧和荒谬，最终让自己获得了幸福。我认为在这一点上，加缪的思想，要远比很多传统的宗教和哲学，有价值得多。因为对于人生的荒谬，虽然它们也有认识，但给出的答案，要么就是放弃今生祈求来世，要么就是过于宏大，什么爱、什么美、什么善。却唯独忘了干！</p><p>加缪曾说：不要走在我的后面，我可能不会引路；不要走在我的前面，我可能不会跟随；请走在我的身边，做我的朋友！</p><h2 id="骑行"><a href="#骑行" class="headerlink" title="骑行"></a>骑行</h2><p>有些路，没有路过，这是我的遗憾，很多人不理解骑行是为了什么？曾经的当然我也是这样认为的，自己在北京的远郊区经常会有骑行爱好者，因此便产生这个疑问。</p><p>因为健康骑的方式让我爱上了骑行这项运动，让我心中久违的梦再次点燃。最初从骑10千米都困难到一口气骑了80km，配速从不到20km/h到现在的25km/h这是我四个月骑行来的变化。</p><p>太阳西下，总会给人一种遐想，是渴望心灵与大自然的碰撞，也许是对生活和理想的不满，梦与实际的不解。四个月来的晚上，我带着余霞，骑着初中买的UCC山地车出发了……下一次我会骑向哪里呢？</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803215415.png" style="zoom:25%;" /></p><h2 id="小玩意"><a href="#小玩意" class="headerlink" title="小玩意"></a>小玩意</h2><p>都是在四月前完成的，都是为了向心爱的女孩去表达自己的心意，一项是自己写的情书网页，在GitHub上已经设置为private了，因为代码写的太羞耻了，内容写的也很“螺旋马太”。</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803183038.png" alt=""></p><p>还有一项是用单片机arduino和面包板焊接锡线做出来的爱心流水灯，学习了不少关于焊接的知识，但是都不如用pcb板方便。</p><p>图片就不太想放了，技术力太低了。</p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>这半年来并没有写多少博客相关的内容，甚至花不少时间痴迷于博客的美化和魔改<a href="https://kaguranotamashii.github.io/2021/11/22/[main]hexo/博客常用的记录/">博客的搭建记录. | これは神楽の魂のブログ (kaguranotamashii.github.io)</a></p><p>下半年我想在我的博客写一些关于游戏或者影视的评测，提高我的写作水平，比如我最近正在玩的一部gal 青い空のカミュ</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803221519.png" alt=""></p><h1 id="关于下半年的期望"><a href="#关于下半年的期望" class="headerlink" title="关于下半年的期望"></a>关于下半年的期望</h1><ul><li>写更好的代码</li><li>读有趣的书</li><li>拥有BMI为28以下的身体</li></ul><p>最后用<a href="https://ja.wikipedia.org/wiki/新世紀エヴァンゲリオン劇場版_Air/まごころを、君に"><strong>[まごころを、君に]</strong> </a>落幕的台词作为这半年来的结束。我现在所经历的社会环境和这部剧当时的历史环境有着惊人的相似之处，我和上世纪90年代的他们有着深刻的话题。妄图从它中得以治愈……</p><blockquote><p>なに？<br>夢って何かな？<br>夢？<br>そう 夢<br>分からない<br>現実が よく分からないんだ<br>他人の現実と自分の真実との溝が<br>正確に把握できないのね<br>幸せがどこにあるのか<br>分からないんだ<br>夢の中にしか<br>幸せを見いだせないのね<br>だから これは現実じゃない<br>誰もいない世界だ<br>そう 夢<br>だから ここには僕がいない<br>都合のいい 作り事で<br>現実の復讐(しゅう)をしていたのね<br>いけないのか<br>虚構に逃げて<br>真実をごまかしていたのね<br>僕 一人の夢を見ちゃいけないのか<br>それは夢じゃない<br>ただの現実の埋め合わせよ<br>〜♪<br>（観衆のざわめき）<br>じゃあ 僕の夢はどこ？<br>それは 現実の続き<br>僕の現実はどこ？<br>それは 夢の終わりよ<br>♪</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184012.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184049.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>没想到2022年就这样过去了一半，感叹时光飞逝之余，也回头回顾今年上半年的光阴是否虚度，遗憾固然存在，但也又一点点可以聊以自慰的成绩。</p><h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>学习了vue框架和javase，在学习前端的同时彻底爱上了vscode，以及有意思的开源插件。四月学前端的时候用原生js写了页love-letter，虽然被拒绝了，但是认识到了原生js的不方便之处后，又简单学习了jQuery，才意识到了js框架的便利之处。</p><p>这八个月只能说是大摆烂了</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803163308.png" alt="微软式幽默"></p><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803224901.png" alt=""></p><p>这八个月读了几本有趣的书</p><p>自己目前最喜欢的是法国作家<strong><a href="https://zh.m.wikipedia.org/zh-hans/阿尔贝·加缪">阿尔贝·加缪</a></strong></p><blockquote><p>“  今天，妈妈死了。也可能是昨天，我不知道。” </p><p>”现在我面对这个充满了星光与默示的夜，第一次向这个冷漠的世界敞开了我的心扉“</p><p> ——-加缪《局外人》</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803164016.png" alt=""></p><p>当在这八个月以来压抑的网课以及疫情防控的影响下，烦躁的内心终于静了下来，总能去做一些有艺术的事情，比如说，思考，读书，学习等。这本局外人是我读的印象最深刻的一本书。文章情节不复杂一个下午便能读完。</p><p>默尔索的行为真的是荒诞的吗？我想肯定有些部分是荒诞的，但是面对群众以及神职人员对于洗礼罪恶的喋喋不休，他并没有所打动，坚持用自己的语言表达对生活的热爱。他们虽然清醒地认识到人的脆弱和局限，以及世界和人生必然的荒谬，但他们却并没有被击垮，而是勇敢地面对，并努力地克服这种悲剧和荒谬，最终让自己获得了幸福。我认为在这一点上，加缪的思想，要远比很多传统的宗教和哲学，有价值得多。因为对于人生的荒谬，虽然它们也有认识，但给出的答案，要么就是放弃今生祈求来世，要么就是过于宏大，什么爱、什么美、什么善。却唯独忘了干！</p><p>加缪曾说：不要走在我的后面，我可能不会引路；不要走在我的前面，我可能不会跟随；请走在我的身边，做我的朋友！</p><h2 id="骑行"><a href="#骑行" class="headerlink" title="骑行"></a>骑行</h2><p>有些路，没有路过，这是我的遗憾，很多人不理解骑行是为了什么？曾经的当然我也是这样认为的，自己在北京的远郊区经常会有骑行爱好者，因此便产生这个疑问。</p><p>因为健康骑的方式让我爱上了骑行这项运动，让我心中久违的梦再次点燃。最初从骑10千米都困难到一口气骑了80km，配速从不到20km/h到现在的25km/h这是我四个月骑行来的变化。</p><p>太阳西下，总会给人一种遐想，是渴望心灵与大自然的碰撞，也许是对生活和理想的不满，梦与实际的不解。四个月来的晚上，我带着余霞，骑着初中买的UCC山地车出发了……下一次我会骑向哪里呢？</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803215415.png" style="zoom:60%;" /></p><h2 id="小玩意"><a href="#小玩意" class="headerlink" title="小玩意"></a>小玩意</h2><p>都是在四月前完成的，都是为了向心爱的女孩去表达自己的心意，一项是自己写的情书网页，在GitHub上已经设置为private了，因为代码写的太羞耻了，内容写的也很“螺旋马太”。</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803183038.png" alt=""></p><p>还有一项是用单片机arduino和面包板焊接锡线做出来的爱心流水灯，学习了不少关于焊接的知识，但是都不如用pcb板方便。</p><p>图片就不太想放了，技术力太低了。</p><h2 id="日语"><a href="#日语" class="headerlink" title="日语"></a>日语</h2><p>今年在北大考点参加了七月的jlpt n2等级的考试，可惜摆烂了很长时间，甚至只花了两周的时间去备考n2。我想我未来后应该迟早会去日本生活，或者旅行，所以日语依然要继续保持能力。很想去亚洲第一大城市东京去看看，去北海道，名古屋……</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115613.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115545.png" alt="北京大学！"></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115509.png" alt="答题卡上的封条"></p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>这半年来并没有写多少博客相关的内容，甚至花不少时间痴迷于博客的美化和魔改<a href="https://kaguranotamashii.github.io/2021/11/22/[main]hexo/博客常用的记录/">博客的搭建记录. | これは神楽の魂のブログ (kaguranotamashii.github.io)</a></p><p>下半年我想在我的博客写一些关于游戏或者影视的评测，提高我的写作水平，比如我最近正在玩的一部gal 青い空のカミュ</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803221519.png" alt=""></p><h1 id="关于下半年的期望"><a href="#关于下半年的期望" class="headerlink" title="关于下半年的期望"></a>关于下半年的期望</h1><ul><li>写更好的代码</li><li>读有趣的书</li><li>拥有BMI为28以下的身体</li></ul><p>最后用<a href="https://ja.wikipedia.org/wiki/新世紀エヴァンゲリオン劇場版_Air/まごころを、君に"><strong>[まごころを、君に]</strong> </a>落幕的台词作为这半年来的结束。我现在所经历的社会环境和这部剧当时的历史环境有着惊人的相似之处，我和上世纪90年代的他们有着深刻的话题。妄图从它中得以治愈……</p><blockquote><p>なに？<br>夢って何かな？<br>夢？<br>そう 夢<br>分からない<br>現実が よく分からないんだ<br>他人の現実と自分の真実との溝が<br>正確に把握できないのね<br>幸せがどこにあるのか<br>分からないんだ<br>夢の中にしか<br>幸せを見いだせないのね<br>だから これは現実じゃない<br>誰もいない世界だ<br>そう 夢<br>だから ここには僕がいない<br>都合のいい 作り事で<br>現実の復讐(しゅう)をしていたのね<br>いけないのか<br>虚構に逃げて<br>真実をごまかしていたのね<br>僕 一人の夢を見ちゃいけないのか<br>それは夢じゃない<br>ただの現実の埋め合わせよ<br>〜♪<br>（観衆のざわめき）<br>じゃあ 僕の夢はどこ？<br>それは 現実の続き<br>僕の現実はどこ？<br>それは 夢の終わりよ<br>♪</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184012.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184049.png" alt=""></p>]]></content>
     
     
       
@@ -109,8 +109,8 @@
   
   <entry>
     <title>LeetcodeNotes</title>
-    <link href="https://kaguranotamashii.github.io/2022/07/04/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/LeetcodeNotes/"/>
-    <id>https://kaguranotamashii.github.io/2022/07/04/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/LeetcodeNotes/</id>
+    <link href="https://kaguranotamashii.github.io/2022/07/04/[main]CS/[main]Leetcode/LeetcodeNotes/"/>
+    <id>https://kaguranotamashii.github.io/2022/07/04/[main]CS/[main]Leetcode/LeetcodeNotes/</id>
     <published>2022-07-04T05:41:15.000Z</published>
     <updated>2022-07-16T15:37:41.046Z</updated>
     
@@ -136,8 +136,8 @@
   
   <entry>
     <title>vue.js的学习笔记</title>
-    <link href="https://kaguranotamashii.github.io/2022/05/27/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/vue%E7%AC%94%E8%AE%B0/"/>
-    <id>https://kaguranotamashii.github.io/2022/05/27/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/vue%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://kaguranotamashii.github.io/2022/05/27/[main]CS/[main]web/vue%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kaguranotamashii.github.io/2022/05/27/[main]CS/[main]web/vue%E7%AC%94%E8%AE%B0/</id>
     <published>2022-05-27T13:17:15.000Z</published>
     <updated>2022-08-03T15:06:48.339Z</updated>
     
@@ -187,8 +187,8 @@
   
   <entry>
     <title>Java SE</title>
-    <link href="https://kaguranotamashii.github.io/2022/02/21/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20(2)/"/>
-    <id>https://kaguranotamashii.github.io/2022/02/21/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20(2)/</id>
+    <link href="https://kaguranotamashii.github.io/2022/02/21/[main]CS/[main]computer-language/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20(2)/"/>
+    <id>https://kaguranotamashii.github.io/2022/02/21/[main]CS/[main]computer-language/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20(2)/</id>
     <published>2022-02-21T05:47:24.000Z</published>
     <updated>2022-07-16T15:37:41.547Z</updated>
     
@@ -214,8 +214,8 @@
   
   <entry>
     <title>日常分享</title>
-    <link href="https://kaguranotamashii.github.io/2022/02/16/[main]%E5%AE%9A%E6%9C%9F%E6%80%BB%E7%BB%93/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/"/>
-    <id>https://kaguranotamashii.github.io/2022/02/16/[main]%E5%AE%9A%E6%9C%9F%E6%80%BB%E7%BB%93/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/</id>
+    <link href="https://kaguranotamashii.github.io/2022/02/16/[main]summary/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/"/>
+    <id>https://kaguranotamashii.github.io/2022/02/16/[main]summary/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/</id>
     <published>2022-02-16T12:35:32.000Z</published>
     <updated>2022-07-17T15:49:22.385Z</updated>
     
@@ -235,8 +235,8 @@
   
   <entry>
     <title>jQuery基础</title>
-    <link href="https://kaguranotamashii.github.io/2022/02/12/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/jQuery%E5%9F%BA%E7%A1%80/"/>
-    <id>https://kaguranotamashii.github.io/2022/02/12/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/jQuery%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://kaguranotamashii.github.io/2022/02/12/[main]CS/[main]web/jQuery%E5%9F%BA%E7%A1%80/"/>
+    <id>https://kaguranotamashii.github.io/2022/02/12/[main]CS/[main]web/jQuery%E5%9F%BA%E7%A1%80/</id>
     <published>2022-02-11T16:30:17.000Z</published>
     <updated>2022-08-03T15:07:35.413Z</updated>
     
@@ -263,8 +263,8 @@
   
   <entry>
     <title>swift学习笔记</title>
-    <link href="https://kaguranotamashii.github.io/2022/01/21/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://kaguranotamashii.github.io/2022/01/21/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://kaguranotamashii.github.io/2022/01/21/[main]CS/[main]computer-language/swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kaguranotamashii.github.io/2022/01/21/[main]CS/[main]computer-language/swift%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2022-01-21T13:16:51.000Z</published>
     <updated>2022-07-16T15:37:41.550Z</updated>
     
@@ -309,8 +309,8 @@
   
   <entry>
     <title>数据结构学习笔记</title>
-    <link href="https://kaguranotamashii.github.io/2022/01/15/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>https://kaguranotamashii.github.io/2022/01/15/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E7%AE%97%E6%B3%95%E5%8A%9B%E6%89%A3/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="https://kaguranotamashii.github.io/2022/01/15/[main]CS/[main]Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>https://kaguranotamashii.github.io/2022/01/15/[main]CS/[main]Leetcode/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-01-15T06:11:27.000Z</published>
     <updated>2022-07-16T15:37:41.555Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>C++学习笔记</title>
-    <link href="https://kaguranotamashii.github.io/2022/01/12/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/CPP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://kaguranotamashii.github.io/2022/01/12/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/CPP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://kaguranotamashii.github.io/2022/01/12/[main]CS/[main]computer-language/CPP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kaguranotamashii.github.io/2022/01/12/[main]CS/[main]computer-language/CPP%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <published>2022-01-12T11:52:47.000Z</published>
     <updated>2022-07-17T15:51:26.289Z</updated>
     
@@ -353,8 +353,8 @@
   
   <entry>
     <title>通信学院期末C复习题</title>
-    <link href="https://kaguranotamashii.github.io/2021/12/16/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E9%A2%98/"/>
-    <id>https://kaguranotamashii.github.io/2021/12/16/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E9%A2%98/</id>
+    <link href="https://kaguranotamashii.github.io/2021/12/16/[main]CS/[main]computer-language/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E9%A2%98/"/>
+    <id>https://kaguranotamashii.github.io/2021/12/16/[main]CS/[main]computer-language/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E9%A2%98/</id>
     <published>2021-12-16T08:12:14.000Z</published>
     <updated>2022-07-16T15:37:41.549Z</updated>
     
@@ -378,8 +378,8 @@
   
   <entry>
     <title>Python基础</title>
-    <link href="https://kaguranotamashii.github.io/2021/12/04/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/Python%E5%9F%BA%E7%A1%80/"/>
-    <id>https://kaguranotamashii.github.io/2021/12/04/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/Python%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://kaguranotamashii.github.io/2021/12/04/[main]CS/[main]computer-language/Python%E5%9F%BA%E7%A1%80/"/>
+    <id>https://kaguranotamashii.github.io/2021/12/04/[main]CS/[main]computer-language/Python%E5%9F%BA%E7%A1%80/</id>
     <published>2021-12-04T07:22:31.000Z</published>
     <updated>2022-07-16T15:37:41.548Z</updated>
     
@@ -401,8 +401,8 @@
   
   <entry>
     <title>CSS基础</title>
-    <link href="https://kaguranotamashii.github.io/2021/12/03/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/CSS%E5%9F%BA%E7%A1%80/"/>
-    <id>https://kaguranotamashii.github.io/2021/12/03/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/CSS%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://kaguranotamashii.github.io/2021/12/03/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/CSS%E5%9F%BA%E7%A1%80/"/>
+    <id>https://kaguranotamashii.github.io/2021/12/03/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/CSS%E5%9F%BA%E7%A1%80/</id>
     <published>2021-12-03T06:46:59.000Z</published>
     <updated>2022-07-16T15:37:41.558Z</updated>
     
@@ -428,8 +428,8 @@
   
   <entry>
     <title>JavaScript基础</title>
-    <link href="https://kaguranotamashii.github.io/2021/12/01/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/JavaScript%E5%85%A5%E9%97%A8/"/>
-    <id>https://kaguranotamashii.github.io/2021/12/01/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/JavaScript%E5%85%A5%E9%97%A8/</id>
+    <link href="https://kaguranotamashii.github.io/2021/12/01/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/JavaScript%E5%85%A5%E9%97%A8/"/>
+    <id>https://kaguranotamashii.github.io/2021/12/01/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/JavaScript%E5%85%A5%E9%97%A8/</id>
     <published>2021-12-01T11:19:12.000Z</published>
     <updated>2022-07-16T15:37:41.557Z</updated>
     
@@ -476,8 +476,8 @@
   
   <entry>
     <title>Html基础</title>
-    <link href="https://kaguranotamashii.github.io/2021/11/23/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/html%E5%9F%BA%E7%A1%80/"/>
-    <id>https://kaguranotamashii.github.io/2021/11/23/[main]%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/[main]%E5%89%8D%E7%AB%AF/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/html%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://kaguranotamashii.github.io/2021/11/23/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/html%E5%9F%BA%E7%A1%80/"/>
+    <id>https://kaguranotamashii.github.io/2021/11/23/[main]CS/[main]web/%E5%9F%BA%E7%A1%80%E4%B8%89%E4%BB%B6%E5%A5%97/html%E5%9F%BA%E7%A1%80/</id>
     <published>2021-11-23T15:49:10.000Z</published>
     <updated>2022-07-16T15:37:41.556Z</updated>
     
