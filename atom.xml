@@ -6,7 +6,7 @@
   <link href="https://kaguranotamashii.github.io/atom.xml" rel="self"/>
   
   <link href="https://kaguranotamashii.github.io/"/>
-  <updated>2022-07-28T16:35:19.953Z</updated>
+  <updated>2022-07-28T16:34:39.141Z</updated>
   <id>https://kaguranotamashii.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>书中的那些好词好句</title>
-    <link href="https://kaguranotamashii.github.io/2022/07/20/[mian]Book/%E4%B9%A6%E4%B8%AD%E7%9A%84%E9%82%A3%E4%BA%9B%E5%A5%BD%E8%AF%8D%E5%A5%BD%E5%8F%A5/"/>
-    <id>https://kaguranotamashii.github.io/2022/07/20/[mian]Book/%E4%B9%A6%E4%B8%AD%E7%9A%84%E9%82%A3%E4%BA%9B%E5%A5%BD%E8%AF%8D%E5%A5%BD%E5%8F%A5/</id>
-    <published>2022-07-20T14:18:22.000Z</published>
-    <updated>2022-07-28T16:35:19.953Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="局外人"><a href="#局外人" class="headerlink" title="局外人"></a>局外人</h1><p><strong>隽永</strong><br>词语: 隽永</p><p>拼音: juàn yǒng</p><p>注音: ㄐㄨㄢˋ ㄩㄥˇ</p><p>近义词: 有味</p><p>反义词: 乏味 活泼 生动 枯燥</p><p>词语解释: [meaningful] [言辞、诗文或其他事物]意味深长,引人入胜<br>通论战国时说士权变,亦自序其说,凡八十一首,号曰《隽永》。——《汉书·蒯通传》<br>语颇隽永,耐人寻味</p><p>摘自: <a href="https://cidian.d777.com/juanyong3">https://cidian.d777.com/juanyong3</a></p><p><strong>无可置疑</strong><br>词语: 无可置疑</p><p>拼音: wú kě zhì yí</p><p>注音: ㄨˊ ㄎㄜˇ ㄓㄧˋ ㄧˊ</p><p>近义词: 无可争辩</p><p>词语解释: [indubitable;unquestionable] 大可不必持怀疑态度。形容证据确凿,事情明摆着<br>无可置疑的证词</p><p>引证解释: 确凿不容怀疑。 范文澜 蔡美彪 等《中国通史》第一编第五章第二节：“ 战国 时某些地区已能制钢，无可置疑。”</p><p>相关词语: 无 可 置 疑</p><p>相关成语: 无 可 置 疑</p><p>摘自: <a href="https://cidian.d777.com/wukezhiyi">https://cidian.d777.com/wukezhiyi</a></p><p><strong>“广袤无限，</strong>汉语成语，拼音是guǎng mào wú xiàn，<strong><em>意思是形容一望无际，没有边界。</em>”</strong></p><p><strong>“映入眼帘，</strong>汉语成语，拼音是yìng rù yǎn lián，<em>意思是某物进入视线之内。</em>”</p><p><strong>烹饪</strong> [拼音]    [pēng rèn] [释义]    （动）做饭菜。</p><p> <strong>踉跄</strong> [拼音]    [liàng qiàng] [释义]    形容走路不稳，四处跌撞的样子。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;局外人&quot;&gt;&lt;a href=&quot;#局外人&quot; class=&quot;headerlink&quot; title=&quot;局外人&quot;&gt;&lt;/a&gt;局外人&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;隽永&lt;/strong&gt;&lt;br&gt;词语: 隽永&lt;/p&gt;
-&lt;p&gt;拼音: juàn yǒng&lt;/p&gt;
-&lt;p&gt;注音: ㄐㄨㄢˋ</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>MySql基础</title>
@@ -85,9 +63,9 @@
     <link href="https://kaguranotamashii.github.io/2022/07/07/[main]summary/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/"/>
     <id>https://kaguranotamashii.github.io/2022/07/07/[main]summary/%E5%A4%A7%E4%B8%80%E4%B8%8B%E5%AD%A6%E6%9C%9F%E6%80%BB%E7%BB%93/</id>
     <published>2022-07-06T16:37:29.000Z</published>
-    <updated>2022-08-04T03:58:46.037Z</updated>
+    <updated>2022-08-05T09:25:47.851Z</updated>
     
-    <content type="html"><![CDATA[<p>没想到2022年就这样过去了一半，感叹时光飞逝之余，也回头回顾今年上半年的光阴是否虚度，遗憾固然存在，但也又一点点可以聊以自慰的成绩。</p><h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>学习了vue框架和javase，在学习前端的同时彻底爱上了vscode，以及有意思的开源插件。四月学前端的时候用原生js写了页love-letter，虽然被拒绝了，但是认识到了原生js的不方便之处后，又简单学习了jQuery，才意识到了js框架的便利之处。</p><p>这八个月只能说是大摆烂了</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803163308.png" alt="微软式幽默"></p><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803224901.png" alt=""></p><p>这八个月读了几本有趣的书</p><p>自己目前最喜欢的是法国作家<strong><a href="https://zh.m.wikipedia.org/zh-hans/阿尔贝·加缪">阿尔贝·加缪</a></strong></p><blockquote><p>“  今天，妈妈死了。也可能是昨天，我不知道。” </p><p>”现在我面对这个充满了星光与默示的夜，第一次向这个冷漠的世界敞开了我的心扉“</p><p> ——-加缪《局外人》</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803164016.png" alt=""></p><p>当在这八个月以来压抑的网课以及疫情防控的影响下，烦躁的内心终于静了下来，总能去做一些有艺术的事情，比如说，思考，读书，学习等。这本局外人是我读的印象最深刻的一本书。文章情节不复杂一个下午便能读完。</p><p>默尔索的行为真的是荒诞的吗？我想肯定有些部分是荒诞的，但是面对群众以及神职人员对于洗礼罪恶的喋喋不休，他并没有所打动，坚持用自己的语言表达对生活的热爱。他们虽然清醒地认识到人的脆弱和局限，以及世界和人生必然的荒谬，但他们却并没有被击垮，而是勇敢地面对，并努力地克服这种悲剧和荒谬，最终让自己获得了幸福。我认为在这一点上，加缪的思想，要远比很多传统的宗教和哲学，有价值得多。因为对于人生的荒谬，虽然它们也有认识，但给出的答案，要么就是放弃今生祈求来世，要么就是过于宏大，什么爱、什么美、什么善。却唯独忘了干！</p><p>加缪曾说：不要走在我的后面，我可能不会引路；不要走在我的前面，我可能不会跟随；请走在我的身边，做我的朋友！</p><h2 id="骑行"><a href="#骑行" class="headerlink" title="骑行"></a>骑行</h2><p>有些路，没有路过，这是我的遗憾，很多人不理解骑行是为了什么？曾经的当然我也是这样认为的，自己在北京的远郊区经常会有骑行爱好者，因此便产生这个疑问。</p><p>因为健康骑的方式让我爱上了骑行这项运动，让我心中久违的梦再次点燃。最初从骑10千米都困难到一口气骑了80km，配速从不到20km/h到现在的25km/h这是我四个月骑行来的变化。</p><p>太阳西下，总会给人一种遐想，是渴望心灵与大自然的碰撞，也许是对生活和理想的不满，梦与实际的不解。四个月来的晚上，我带着余霞，骑着初中买的UCC山地车出发了……下一次我会骑向哪里呢？</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803215415.png" style="zoom:60%;" /></p><h2 id="小玩意"><a href="#小玩意" class="headerlink" title="小玩意"></a>小玩意</h2><p>都是在四月前完成的，都是为了向心爱的女孩去表达自己的心意，一项是自己写的情书网页，在GitHub上已经设置为private了，因为代码写的太羞耻了，内容写的也很“螺旋马太”。</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803183038.png" alt=""></p><p>还有一项是用单片机arduino和面包板焊接锡线做出来的爱心流水灯，学习了不少关于焊接的知识，但是都不如用pcb板方便。</p><p>图片就不太想放了，技术力太低了。</p><h2 id="日语"><a href="#日语" class="headerlink" title="日语"></a>日语</h2><p>今年在北大考点参加了七月的jlpt n2等级的考试，可惜摆烂了很长时间，甚至只花了两周的时间去备考n2。我想我未来后应该迟早会去日本生活，或者旅行，所以日语依然要继续保持能力。很想去亚洲第一大城市东京去看看，去北海道，名古屋……</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115613.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115545.png" alt="北京大学！"></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115509.png" alt="答题卡上的封条"></p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>这半年来并没有写多少博客相关的内容，甚至花不少时间痴迷于博客的美化和魔改<a href="https://kaguranotamashii.github.io/2021/11/22/[main]hexo/博客常用的记录/">博客的搭建记录. | これは神楽の魂のブログ (kaguranotamashii.github.io)</a></p><p>下半年我想在我的博客写一些关于游戏或者影视的评测，提高我的写作水平，比如我最近正在玩的一部gal 青い空のカミュ</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803221519.png" alt=""></p><h1 id="关于下半年的期望"><a href="#关于下半年的期望" class="headerlink" title="关于下半年的期望"></a>关于下半年的期望</h1><ul><li>写更好的代码</li><li>读有趣的书</li><li>拥有BMI为28以下的身体</li></ul><p>最后用<a href="https://ja.wikipedia.org/wiki/新世紀エヴァンゲリオン劇場版_Air/まごころを、君に"><strong>[まごころを、君に]</strong> </a>落幕的台词作为这半年来的结束。我现在所经历的社会环境和这部剧当时的历史环境有着惊人的相似之处，我和上世纪90年代的他们有着深刻的话题。妄图从它中得以治愈……</p><blockquote><p>なに？<br>夢って何かな？<br>夢？<br>そう 夢<br>分からない<br>現実が よく分からないんだ<br>他人の現実と自分の真実との溝が<br>正確に把握できないのね<br>幸せがどこにあるのか<br>分からないんだ<br>夢の中にしか<br>幸せを見いだせないのね<br>だから これは現実じゃない<br>誰もいない世界だ<br>そう 夢<br>だから ここには僕がいない<br>都合のいい 作り事で<br>現実の復讐(しゅう)をしていたのね<br>いけないのか<br>虚構に逃げて<br>真実をごまかしていたのね<br>僕 一人の夢を見ちゃいけないのか<br>それは夢じゃない<br>ただの現実の埋め合わせよ<br>〜♪<br>（観衆のざわめき）<br>じゃあ 僕の夢はどこ？<br>それは 現実の続き<br>僕の現実はどこ？<br>それは 夢の終わりよ<br>♪</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184012.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184049.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>没想到2022年就这样过去了一半，感叹时光飞逝之余，也回头回顾今年上半年的光阴是否虚度，遗憾固然存在，但也又一点点可以聊以自慰的成绩。</p><h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><p>学习了vue框架和javase，在学习前端的同时彻底爱上了vscode，以及有意思的开源插件。四月学前端的时候用原生js写了页love-letter，虽然被拒绝了，但是认识到了原生js的不方便之处后，又简单学习了jQuery，才意识到了js框架的便利之处。</p><p>这八个月只能说是大摆烂了</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803163308.png" alt="微软式幽默"></p><h2 id="读书"><a href="#读书" class="headerlink" title="读书"></a>读书</h2><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803224901.png" alt=""></p><p>这八个月读了几本有趣的书</p><p>自己目前最喜欢的是法国作家<strong><a href="https://zh.m.wikipedia.org/zh-hans/阿尔贝·加缪">阿尔贝·加缪</a></strong></p><blockquote><p>“  今天，妈妈死了。也可能是昨天，我不知道。” </p><p>”现在我面对这个充满了星光与默示的夜，第一次向这个冷漠的世界敞开了我的心扉“</p><p> ——-加缪《局外人》</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803164016.png" alt=""></p><p>当在这八个月以来压抑的网课以及疫情防控的影响下，烦躁的内心终于静了下来，总能去做一些有艺术的事情，比如说，思考，读书，学习等。这本局外人是我读的印象最深刻的一本书。文章情节不复杂一个下午便能读完。</p><p>默尔索的行为真的是荒诞的吗？我想肯定有些部分是荒诞的，但是面对群众以及神职人员对于洗礼罪恶的喋喋不休，他并没有所打动，坚持用自己的语言表达对生活的热爱。他们虽然清醒地认识到人的脆弱和局限，以及世界和人生必然的荒谬，但他们却并没有被击垮，而是勇敢地面对，并努力地克服这种悲剧和荒谬，最终让自己获得了幸福。我认为在这一点上，加缪的思想，要远比很多传统的宗教和哲学，有价值得多。因为对于人生的荒谬，虽然它们也有认识，但给出的答案，要么就是放弃今生祈求来世，要么就是过于宏大，什么爱、什么美、什么善。却唯独忘了干！</p><p>加缪曾说：不要走在我的后面，我可能不会引路；不要走在我的前面，我可能不会跟随；请走在我的身边，做我的朋友！</p><h2 id="骑行"><a href="#骑行" class="headerlink" title="骑行"></a>骑行</h2><p>有些路，没有路过，这是我的遗憾，很多人不理解骑行是为了什么？曾经的当然我也是这样认为的，自己在北京的远郊区经常会有骑行爱好者，因此便产生这个疑问。</p><p>因为健康骑的方式让我爱上了骑行这项运动，让我心中久违的梦再次点燃。最初从骑10千米都困难到一口气骑了80km，配速从不到20km/h到现在的25km/h这是我四个月骑行来的变化。</p><p>太阳西下，总会给人一种遐想，是渴望心灵与大自然的碰撞，也许是对生活和理想的不满，梦与实际的不解。四个月来的晚上，我带着余霞，骑着初中买的UCC山地车出发了……下一次我会骑向哪里呢？</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803215415.png" style="zoom:60%;" /></p><h2 id="小玩意"><a href="#小玩意" class="headerlink" title="小玩意"></a>小玩意</h2><p>都是在四月前完成的，都是为了向心爱的女孩去表达自己的心意，一项是自己写的情书网页，在GitHub上已经设置为private了，因为代码写的太羞耻了，内容写的也很“螺旋马太”。</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803183038.png" alt=""></p><p>还有一项是用单片机arduino和面包板焊接锡线做出来的爱心流水灯，学习了不少关于焊接的知识，但是都不如用pcb板方便。</p><p>图片就不太想放了，技术力太低了。</p><h2 id="日语"><a href="#日语" class="headerlink" title="日语"></a>日语</h2><p>今年在北大考点参加了七月的jlpt n2等级的考试，可惜摆烂了很长时间，甚至只花了两周的时间去备考n2。我想我未来后应该迟早会去日本生活，或者旅行，所以日语依然要继续保持能力。很想去亚洲第一大城市东京去看看，去北海道，名古屋……</p><p>世界那麽大，我想去看看。</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115613.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115545.png" alt="北京大学！"></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115509.png" alt="答题卡上的封条"></p><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>这半年来并没有写多少博客相关的内容，甚至花不少时间痴迷于博客的美化和魔改<a href="https://kaguranotamashii.github.io/2021/11/22/[main]hexo/博客常用的记录/">博客的搭建记录. | これは神楽の魂のブログ (kaguranotamashii.github.io)</a></p><p>下半年我想在我的博客写一些关于游戏或者影视的评测，提高我的写作水平，比如我最近正在玩的一部gal 青い空のカミュ</p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803221519.png" alt=""></p><h1 id="关于下半年的期望"><a href="#关于下半年的期望" class="headerlink" title="关于下半年的期望"></a>关于下半年的期望</h1><ul><li>写更好的代码</li><li>读有趣的书</li><li>拥有BMI为28以下的身体</li></ul><p>最后用<a href="https://ja.wikipedia.org/wiki/新世紀エヴァンゲリオン劇場版_Air/まごころを、君に"><strong>[まごころを、君に]</strong> </a>落幕的台词作为这半年来的结束。我现在所经历的社会环境和这部剧当时的历史环境有着惊人的相似之处，我和上世纪90年代的他们有着深刻的话题。妄图从它中得以治愈……</p><blockquote><p>なに？<br>夢って何かな？<br>夢？<br>そう 夢<br>分からない<br>現実が よく分からないんだ<br>他人の現実と自分の真実との溝が<br>正確に把握できないのね<br>幸せがどこにあるのか<br>分からないんだ<br>夢の中にしか<br>幸せを見いだせないのね<br>だから これは現実じゃない<br>誰もいない世界だ<br>そう 夢<br>だから ここには僕がいない<br>都合のいい 作り事で<br>現実の復讐(しゅう)をしていたのね<br>いけないのか<br>虚構に逃げて<br>真実をごまかしていたのね<br>僕 一人の夢を見ちゃいけないのか<br>それは夢じゃない<br>ただの現実の埋め合わせよ<br>〜♪<br>（観衆のざわめき）<br>じゃあ 僕の夢はどこ？<br>それは 現実の続き<br>僕の現実はどこ？<br>それは 夢の終わりよ<br>♪</p></blockquote><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184012.png" alt=""></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220803184049.png" alt=""></p>]]></content>
     
     
       
@@ -502,6 +480,27 @@
     <category term="html" scheme="https://kaguranotamashii.github.io/tags/html/"/>
     
     <category term="css" scheme="https://kaguranotamashii.github.io/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我对程序员的再认知</title>
+    <link href="https://kaguranotamashii.github.io/2021/11/23/%E6%88%91%E5%AF%B9%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%86%8D%E8%AE%A4%E8%AF%86/"/>
+    <id>https://kaguranotamashii.github.io/2021/11/23/%E6%88%91%E5%AF%B9%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E5%86%8D%E8%AE%A4%E8%AF%86/</id>
+    <published>2021-11-22T16:08:12.000Z</published>
+    <updated>2022-07-17T15:51:26.287Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-接触"><a href="#1-接触" class="headerlink" title="1.接触"></a>1.接触</h1><p>在高三的时候，和同学讨论志愿报名的时候，一些学物理的男生就表示计算机挣钱多。“我的亲戚学历不高，就自学前端什么什么的，在北京挣了多多少钱”。</p><span id="more"></span><p>后来高考考上了信息科大的通信学院的电子信息工程（EE），没有考中我想去的CS（Computer Science），虽然很失望，但是可以尝试转专业。转专业的想法在我心中愈来愈强烈。因此从开始那天到Iflab社团招新那一段时候，我犯了很严重的错误。</p><h1 id="2-反思"><a href="#2-反思" class="headerlink" title="2.反思"></a>2.反思</h1><p>程序员的灵魂是什么？算法？代码？直到加入了iflab社团，导师为新生推荐的书籍中，部分都是哲学类的书籍，一时让我有了进入了文艺社的感觉。后来才明白，我用VS2019写出来的代码虽然有1G大，但是它没有思想，没有灵魂，没有‘生命力’的躯壳。</p><p>翁PJ学长的‘做一个天马行空的人’<a href="http://pjhubs.com/2021/07/26/talk12/">这封给新生的一封信</a>。让我反思起从这几周我的盲目性，单纯为学习而学习的思维是非常不正确的，Hr不会听你的大学当过什么什么，这个感觉太像我在高考后，渴望着明明考不上的大学听到我的故事，而破例录取，但现实是残酷的。</p><p>编程是为了什么？钱？自由？其实都有一定的存在。用代码创造出自己的世界。最近在学习前端语言的时候我注意到了一系列课叫应用无障碍。与此同时B站也推出了对聋人帮助的实时字幕。这就是编程给特殊群体带来的便利。再比如苹果以及安卓手机的无障碍模式，都是用代码来为特殊人群的帮助。</p><h1 id="3-继续行走"><a href="#3-继续行走" class="headerlink" title="3.继续行走"></a>3.继续行走</h1><p><del>自己也是其中之一，我也感受到了代码的”温暖”，计算机中的代码不再是冷冰冰的英文字母和符号了，它变成了照亮迷路的旅途者的灯塔。</del></p><p><del>大一上半年的我，继续探索吧，寻找属于自己的灯塔吧，自己的方向吧。</del></p><p><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051308290.png" alt="mark"></p><p>202112051308290.png)</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;1-接触&quot;&gt;&lt;a href=&quot;#1-接触&quot; class=&quot;headerlink&quot; title=&quot;1.接触&quot;&gt;&lt;/a&gt;1.接触&lt;/h1&gt;&lt;p&gt;在高三的时候，和同学讨论志愿报名的时候，一些学物理的男生就表示计算机挣钱多。“我的亲戚学历不高，就自学前端什么什么的，在北京挣了多多少钱”。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="闲聊杂谈" scheme="https://kaguranotamashii.github.io/categories/%E9%97%B2%E8%81%8A%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="闲聊杂谈" scheme="https://kaguranotamashii.github.io/tags/%E9%97%B2%E8%81%8A%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
