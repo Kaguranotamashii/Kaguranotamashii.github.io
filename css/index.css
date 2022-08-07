@@ -356,13 +356,6 @@ hr:before,
   -ms-animation: titleScale 1s;
   animation: titleScale 1s;
 }
-#nav.show {
-  -webkit-animation: headerNoOpacity 1s;
-  -moz-animation: headerNoOpacity 1s;
-  -o-animation: headerNoOpacity 1s;
-  -ms-animation: headerNoOpacity 1s;
-  animation: headerNoOpacity 1s;
-}
 canvas:not(#ribbon-canvas),
 #web_bg {
   -webkit-animation: to_show 4s;
@@ -2503,7 +2496,7 @@ figure.highlight pre .javascript .function {
   --recent-post-cover-shadow: #3b3232;
 }
 .recent-posts {
-  padding: 0 15px 0 15px;
+  padding: 0 5px 0 5px;
 }
 .recent-posts .recent-post-item {
   margin-bottom: 15px;
@@ -5067,14 +5060,6 @@ h1.page-title + .tag-cloud-list {
     transform: translate(48px, 0);
   }
 }
-#sidebar #menu-mask {
-  position: fixed;
-  z-index: 102;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-}
 #sidebar #sidebar-menus {
   position: fixed;
   top: 0;
@@ -5083,7 +5068,6 @@ h1.page-title + .tag-cloud-list {
   overflow-x: hidden;
   overflow-y: auto;
   width: 300px;
-  height: 100%;
   background: var(--sidebar-bg);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
