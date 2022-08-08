@@ -12,21 +12,20 @@
     font-weight: lighter
 }
 
-h1#site-title {
-    font-family: ZhuZiAYuanJWD;
-    font-size: 2.2em !important
+@font-face {
+    font-family: ruizi;
+    src: url(/font/ruizi.ttf);
+    font-display: swap;
+    font-weight: lighter
 }
 
-span#subtitle {
-    font-family: Candyhome;
-    font-size: 1.0em !important
+@font-face {
+    font-family:shang;
+    src: url(/font/ShangShouXuanSong.ttf);
+    font-display: swap;
+    font-weight: lighter
 }
 
-/* a#site-name {
-    font-family: Candyhome;
-    font-size: 1.5em !important
-} */
-nav#nav.show {
-    font-family: Candyhome;
-    font-size: 1.5em !important
-}
+
+
+
