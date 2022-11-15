@@ -1,0 +1,62 @@
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+#footer,
+#footer:before {
+  background: transparent !important;
+}
+div#post {
+  background: rgba(255,255,255,0.95);
+}
+div#page {
+  background: rgba(255,255,255,0.95);
+}
+div#archive {
+  background: rgba(255,255,255,0.95);
+}
+div#tag {
+  background: rgba(255,255,255,0.95);
+}
+div#category {
+  background: rgba(255,255,255,0.95);
+}
+#recent-posts>.recent-post-item,
+.layout>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+  background: rgba(255,255,255,0.97);
+}
+#aside-content .card-widget {
+  background: rgba(255,255,255,0.92);
+}
+[data-theme="dark"] div#post {
+  background: rgba(0,0,0,0.8) !important;
+}
+[data-theme="dark"] div#page {
+  background: rgba(0,0,0,0.8) !important;
+}
+[data-theme="dark"] div#archive {
+  background: rgba(0,0,0,0.8) !important;
+}
+[data-theme="dark"] div#tag {
+  background: rgba(0,0,0,0.8) !important;
+}
+[data-theme="dark"] div#category {
+  background: rgba(0,0,0,0.8) !important;
+}
+[data-theme="dark"],
+#recent-posts>.recent-post-item,
+.layout>div:first-child:not(.recent-posts),
+.layout_post>#page,
+.layout_post>#post,
+.read-mode .layout_post>#post {
+  background: rgba(0,0,0,0.8);
+}
+[data-theme="dark"] #aside-content .card-widget {
+  background: rgba(0,0,0,0.7) !important;
+}
