@@ -1,23 +1,23 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeetcodeNotes | これは神楽の魂のブログ</title><meta name="keywords" content="数据结构与算法"><meta name="author" content="神楽の魂"><meta name="copyright" content="神楽の魂"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="d 第二天 字符串字符串的遍历「 字符串 」 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以\0结尾的，在 C语言中，字符串的表示如下： 12char c[6] = &quot;Hello&quot;;                         // (1)char d[5] = &amp;#123; &amp;#x27;H&amp;#x27;, &amp;#x">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeetcodeNotes | 神楽の魂の小窝</title><meta name="keywords" content="数据结构与算法"><meta name="author" content="神楽の魂の小窝"><meta name="copyright" content="神楽の魂の小窝"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="d  第二天 字符串  字符串的遍历 「 字符串 」 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以\0结尾的，在 C语言中，字符串的表示如下： 12char c[6] &#x3D; &quot;Hello&quot;;                         &#x2F;&#x2F; (1)char d[5] &#x3D; &amp;#123; &amp;#x27;H&amp;#x27;,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetcodeNotes">
 <meta property="og:url" content="https://kaguranotamashii.github.io/posts/44870/index.html">
-<meta property="og:site_name" content="これは神楽の魂のブログ">
-<meta property="og:description" content="d 第二天 字符串字符串的遍历「 字符串 」 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以\0结尾的，在 C语言中，字符串的表示如下： 12char c[6] = &quot;Hello&quot;;                         // (1)char d[5] = &amp;#123; &amp;#x27;H&amp;#x27;, &amp;#x">
+<meta property="og:site_name" content="神楽の魂の小窝">
+<meta property="og:description" content="d  第二天 字符串  字符串的遍历 「 字符串 」 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以\0结尾的，在 C语言中，字符串的表示如下： 12char c[6] &#x3D; &quot;Hello&quot;;                         &#x2F;&#x2F; (1)char d[5] &#x3D; &amp;#123; &amp;#x27;H&amp;#x27;,">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png">
+<meta property="og:image" content="https://bu.dusays.com/2022/09/01/63103c8a03a24.webp">
 <meta property="article:published_time" content="2022-07-04T05:41:15.000Z">
 <meta property="article:modified_time" content="2022-07-16T15:37:41.046Z">
-<meta property="article:author" content="神楽の魂">
+<meta property="article:author" content="神楽の魂の小窝">
 <meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kaguranotamashii.github.io/posts/44870/"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://bu.dusays.com/2022/09/01/63103c8a03a24.webp"><link rel="shortcut icon" href="https://bu.dusays.com/2022/09/01/63103c75da20e.webp"><link rel="canonical" href="https://kaguranotamashii.github.io/posts/44870/"><link rel="preconnect" href="//fastly.jsdelivr.net"/><link rel="preconnect" href="//cdn.dusays.com"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"繁"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"距离上次更新已经过了","messageNext":"天，文章所描述的內容可能已经发生变化，请留意"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -35,17 +35,17 @@
     day: '天前',
     month: '个月前'
   },
-  copyright: undefined,
+  copyright: {"limitCount":50,"languages":{"author":"作者: 神楽の魂の小窝","link":"链接: ","source":"来源: 神楽の魂の小窝","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
   lightbox: 'fancybox',
   Snackbar: undefined,
   source: {
     justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+      js: 'https://cdn1.tianli0.top/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn1.tianli0.top/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
     }
   },
   isPhotoFigcaption: true,
-  islazyload: false,
+  islazyload: true,
   isAnchor: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: 'LeetcodeNotes',
@@ -124,8 +124,27 @@
       }
       const t = saveToLocal.get('theme')
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
         
       const asideStatus = saveToLocal.get('aside-status')
       if (asideStatus !== undefined) {
@@ -142,37 +161,69 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/css/meihua.css"><link rel="stylesheet" href="/css/rightMenu.css"><link rel="stylesheet" href="/css/ziti.css"></head><body><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="これは神楽の魂のブログ" type="application/atom+xml">
-<div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/202112051125484.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">20</div></a></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/thinking/"><i class="fa-fw fas fa-video"></i><span> 一些想法</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/pingce/"><i class="fa-fw fa fa-camera-retro"></i><span> 评测</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">これは神楽の魂のブログ</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> Book</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> Movie</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> Game</span></a></li><li><a class="site-page child" href="/thinking/"><i class="fa-fw fas fa-video"></i><span> 一些想法</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/pingce/"><i class="fa-fw fa fa-camera-retro"></i><span> 评测</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/artitalk/"><i class="fa-fw fa-solid fa-address-book"></i><span> 日常杂谈</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">LeetcodeNotes</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-04T05:41:15.000Z" title="发表于 2022-07-04 13:41:15">2022-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-16T15:37:41.046Z" title="更新于 2022-07-16 23:37:41">2022-07-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Leetcode/">Leetcode</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Leetcode/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">450</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="LeetcodeNotes"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png');"></div><article class="post-content" id="article-container"><p>d</p>
-<h1 id="第二天-字符串"><a href="#第二天-字符串" class="headerlink" title="第二天 字符串"></a>第二天 字符串</h1><h2 id="字符串的遍历"><a href="#字符串的遍历" class="headerlink" title="字符串的遍历"></a>字符串的遍历</h2><p><strong>「 字符串 」</strong> 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以<code>\0</code>结尾的，在 C语言中，字符串的表示如下：</p>
-<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">6</span>] = <span class="string">"Hello"</span>;                         <span class="comment">// (1)</span></span><br><span class="line"><span class="type">char</span> d[<span class="number">5</span>] = { <span class="string">'H'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'l'</span>, <span class="string">'o'</span> };     <span class="comment">// (2)</span></span><br></pre></td></tr></tbody></table></figure>
-<p> 其中 ( 1 ) (1)(1) 表示字符串，它虽然只有五个字符，但是需要有一个结尾字符<code>\0</code>（它的 ASCII 码值为 0）进行占位，所以字符串长度为 5，但是实际需要 6 个字节的存储空间。<br>  而 ( 2 ) (2)(2) 代表的是一个数组，它的每个元素是一个字符，理解成一个长度为 5 的数组即可。</p>
-<h2 id="字符串的长度"><a href="#字符串的长度" class="headerlink" title="字符串的长度"></a>字符串的长度</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">6</span>] = <span class="string">"Hello"</span>; </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="built_in">strlen</span>(c));</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="字符串的遍历-1"><a href="#字符串的遍历-1" class="headerlink" title="字符串的遍历"></a>字符串的遍历</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len; ++i) {</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; s[i] != <span class="string">'\0'</span>; ++i) {</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; s[i]; ++i) {</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="大小写转换"><a href="#大小写转换" class="headerlink" title="大小写转换"></a>大小写转换</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'Z'</span>){</span><br><span class="line">    s[i]=s[i]-<span class="string">'A'</span>+<span class="string">'a'</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">//首先，我们可以利用 ASCII 码值的关系比较来确定它是大写字母，还是小写字母，如果是大写字母转成小写字母，可以通过先减去A再加上a，从而转换成小写字母。实现如下：</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="字符串拷贝"><a href="#字符串拷贝" class="headerlink" title="字符串拷贝"></a>字符串拷贝</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> src[<span class="number">10</span>] = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="type">char</span> tar[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(tar, src);</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="字符串比较"><a href="#字符串比较" class="headerlink" title="字符串比较"></a>字符串比较</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> src[<span class="number">10</span>] = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="type">char</span> tar[<span class="number">10</span>] = <span class="string">"hello"</span>;</span><br><span class="line"><span class="type">int</span> x = <span class="built_in">strcmp</span>(tar, src);<span class="comment">//！=0</span></span><br><span class="line"><span class="type">int</span> y = <span class="built_in">strcmp</span>(tar, <span class="string">"hello"</span>);<span class="comment">//0</span></span><br></pre></td></tr></tbody></table></figure>
-<h2 id="字符串分割"><a href="#字符串分割" class="headerlink" title="字符串分割"></a>字符串分割</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> str[<span class="number">9</span>] = <span class="string">"I love U"</span>;</span><br><span class="line"><span class="comment">//变成</span></span><br><span class="line"><span class="type">char</span> str[][<span class="number">5</span>] = {</span><br><span class="line">	<span class="string">"I"</span>, <span class="string">"love"</span>, <span class="string">"U"</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></div><div class="post_share"><div class="social-share" data-image="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220416112717.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/weixin.png" target="_blank"><img class="post-qr-code-img" src="/img/weixin.png"></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/42133/"><img class="prev-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220727213122.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">vue.js的学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/posts/3942644093/"><img class="next-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115834.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">大一下学期总结</div></div></a></div></nav><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%A4%A9-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.</span> <span class="toc-text">第二天 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.</span> <span class="toc-text">字符串的遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="toc-number">1.2.</span> <span class="toc-text">字符串的长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%81%8D%E5%8E%86-1"><span class="toc-number">1.3.</span> <span class="toc-text">字符串的遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text">大小写转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.5.</span> <span class="toc-text">字符串拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"><span class="toc-number">1.6.</span> <span class="toc-text">字符串比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2"><span class="toc-number">1.7.</span> <span class="toc-text">字符串分割</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">©2021 - 2022 By 神楽の魂</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">欢迎来到我的博客</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa-solid fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa-solid fa-arrow-rotate-right"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa-solid fa-arrow-right"></i></a><a class="rightMenu-item" id="menu-radompage" target="_blank" rel="noopener" href="https://nicexl.vercel.app/"><i class="fa-solid fa-house"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:kk.copySelect();"><i class="fa-solid fa-copy"></i><span>复制</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:kk.switchDarkMode();"><i class="fa-solid fa-circle-half-stroke"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:kk.switchReadMode();"><i class="fa-solid fa-book"></i><span>阅读模式</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+    })(window)</script><link rel="stylesheet" href="/css/styles.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/css/iconfont.css"><style>#article-container h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { -webkit-animation: avatar_turn_around 3s linear infinite; -moz-animation: avatar_turn_around 3s linear infinite; -o-animation: avatar_turn_around 3s linear infinite; -ms-animation: avatar_turn_around 3s linear infinite; animation: avatar_turn_around 3s linear infinite; }</style><style id="barragesColor"></style><style id="settingStyle"></style><style id="yjjs"></style><style id="themeColor"></style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn1.tianli0.top/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="/css/commentBarrage.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC"><link rel="stylesheet" type="text/css" href="https://cdn1.tianli0.top/npm/node-snackbar@latest/dist/snackbar.min.css" /><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id: "JnlSnWLD7XChjrlx",ck: "JnlSnWLD7XChjrlx"})</script><script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script><script src="/swReg.js"></script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/css/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="神楽の魂の小窝" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><img src="/img/nyancat.gif" id="loadcat"/></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><!--i.fas.fa-chevron-down--></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><!--i.fas.fa-chevron-down--></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> 书</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> 影视</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/pingce/"><i class="fa-fw fa fa-camera-retro"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/speaks/"><i class="fa-fw fa fa-comments"></i><span> 唠一唠</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://bu.dusays.com/2022/09/01/63103c8a03a24.webp')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">神楽の魂の小窝</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><!--i.fas.fa-chevron-down--></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);" rel="external nofollow noreferrer"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><!--i.fas.fa-chevron-down--></a><ul class="menus_item_child"><li><a class="site-page child" href="/books"><i class="fa-fw fas fa-book"></i><span> 书</span></a></li><li><a class="site-page child" href="/movies"><i class="fa-fw fas fa-gamepad"></i><span> 影视</span></a></li><li><a class="site-page child" href="/games"><i class="fa-fw fas fa-video"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/pingce/"><i class="fa-fw fa fa-camera-retro"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/speaks/"><i class="fa-fw fa fa-comments"></i><span> 唠一唠</span></a></div></div></div><div id="toggleButtons"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><!--span=' '+_p('search.title')--></a></div><div id="randoms"><a class="site-page social-icon" href="/random.html"><i class="fa fa-paper-plane"></i></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">LeetcodeNotes</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-07-04T05:41:15.000Z" title="发表于 2022-07-04 13:41:15">2022-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-16T15:37:41.046Z" title="更新于 2022-07-16 23:37:41">2022-07-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Leetcode/">Leetcode</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Leetcode/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">450</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/posts/44870/#post-comment"><span id="twikoo-count"></span></a></span><span class="post-meta-separator">|&nbsp <span class="post-meta-dianzan"><a class="dianzan" href="javascript:void(0)" rel="external nofollow noreferrer" onclick="dianzan()"><i class="fas fa-thumbs-up"></i></a><span class="post-meta-label"> 点赞:</span><span class="dianzan-count">0</span></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>d</p>
+<h1 id="第二天-字符串"><a class="markdownIt-Anchor" href="#第二天-字符串"></a> 第二天 字符串</h1>
+<h2 id="字符串的遍历"><a class="markdownIt-Anchor" href="#字符串的遍历"></a> 字符串的遍历</h2>
+<p><strong>「 字符串 」</strong> 是一种特殊的 字符数组，字符数组需要有一个长度字段来表示这个数组中的元素个数。而字符串不需要，字符串一定是以<code>\0</code>结尾的，在 C语言中，字符串的表示如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">6</span>] = <span class="string">&quot;Hello&quot;</span>;                         <span class="comment">// (1)</span></span><br><span class="line"><span class="type">char</span> d[<span class="number">5</span>] = &#123; <span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span> &#125;;     <span class="comment">// (2)</span></span><br></pre></td></tr></table></figure>
+<p>其中 ( 1 ) (1)(1) 表示字符串，它虽然只有五个字符，但是需要有一个结尾字符<code>\0</code>（它的 ASCII 码值为 0）进行占位，所以字符串长度为 5，但是实际需要 6 个字节的存储空间。<br />
+  而 ( 2 ) (2)(2) 代表的是一个数组，它的每个元素是一个字符，理解成一个长度为 5 的数组即可。</p>
+<h2 id="字符串的长度"><a class="markdownIt-Anchor" href="#字符串的长度"></a> 字符串的长度</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> c[<span class="number">6</span>] = <span class="string">&quot;Hello&quot;</span>; </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">strlen</span>(c));</span><br></pre></td></tr></table></figure>
+<h2 id="字符串的遍历-2"><a class="markdownIt-Anchor" href="#字符串的遍历-2"></a> 字符串的遍历</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; s[i] != <span class="string">&#x27;\0&#x27;</span>; ++i) &#123;</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; s[i]; ++i) &#123;</span><br><span class="line">    <span class="comment">// TODO ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="大小写转换"><a class="markdownIt-Anchor" href="#大小写转换"></a> 大小写转换</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(s[i]&gt;=<span class="string">&#x27;A&#x27;</span>&amp;&amp;s[i]&lt;=<span class="string">&#x27;Z&#x27;</span>)&#123;</span><br><span class="line">    s[i]=s[i]-<span class="string">&#x27;A&#x27;</span>+<span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//首先，我们可以利用 ASCII 码值的关系比较来确定它是大写字母，还是小写字母，如果是大写字母转成小写字母，可以通过先减去A再加上a，从而转换成小写字母。实现如下：</span></span><br></pre></td></tr></table></figure>
+<h2 id="字符串拷贝"><a class="markdownIt-Anchor" href="#字符串拷贝"></a> 字符串拷贝</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> src[<span class="number">10</span>] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"><span class="type">char</span> tar[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(tar, src);</span><br></pre></td></tr></table></figure>
+<h2 id="字符串比较"><a class="markdownIt-Anchor" href="#字符串比较"></a> 字符串比较</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> src[<span class="number">10</span>] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"><span class="type">char</span> tar[<span class="number">10</span>] = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line"><span class="type">int</span> x = <span class="built_in">strcmp</span>(tar, src);<span class="comment">//！=0</span></span><br><span class="line"><span class="type">int</span> y = <span class="built_in">strcmp</span>(tar, <span class="string">&quot;hello&quot;</span>);<span class="comment">//0</span></span><br></pre></td></tr></table></figure>
+<h2 id="字符串分割"><a class="markdownIt-Anchor" href="#字符串分割"></a> 字符串分割</h2>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> str[<span class="number">9</span>] = <span class="string">&quot;I love U&quot;</span>;</span><br><span class="line"><span class="comment">//变成</span></span><br><span class="line"><span class="type">char</span> str[][<span class="number">5</span>] = &#123;</span><br><span class="line">	<span class="string">&quot;I&quot;</span>, <span class="string">&quot;love&quot;</span>, <span class="string">&quot;U&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>LeetcodeNotes</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://kaguranotamashii.github.io/posts/44870/">https://kaguranotamashii.github.io/posts/44870/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>神楽の魂の小窝</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2022-07-04</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2022-07-16</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 180px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener external nofollow noreferrer" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener external nofollow noreferrer" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2022/09/01/63103c8a03a24.webp" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn1.tianli0.top/gh/overtrue/share.js@master/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/42133/"><img class="prev-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220727213122.png" onerror="onerror=null;src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">vue.js的学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/posts/3942644093/"><img class="next-cover" src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115834.png" onerror="onerror=null;src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">大一下学期总结</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="fgx"><div class="avatar_img"><img style="border-radius:10px" src="/img/a.webp" onerror="this.onerror=null;this.src='https://bu.dusays.com/2021/10/13/096df1ddac262.gif'" alt="avatar"/></div><div class="author-info__description"></div><div class="rights"><div class="author-info__name">神楽の魂の小窝</div><div class="card-info-data site-data is-center"><a class="adiv" href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a class="adiv" href="/tags/"><div class="headline">标签</div><div class="length-num">25</div></a><a class="adiv" href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div></div></div><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/kaguranotamashii" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/36216184?spm_id_from=..0.0" rel="external nofollow noreferrer" target="_blank" title=""><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到神乐的博客</div></div><div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden;"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%;"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div></div><div class="card-widget card-calendar"><div class="card-content"><div class="item-headline"><i class="fas fa-calendar"></i><span>文章日历</span></div><div class="widget" id="calendar"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%A4%A9-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.</span> <span class="toc-text"> 第二天 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-number">1.1.</span> <span class="toc-text"> 字符串的遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="toc-number">1.2.</span> <span class="toc-text"> 字符串的长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%81%8D%E5%8E%86-2"><span class="toc-number">1.3.</span> <span class="toc-text"> 字符串的遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.4.</span> <span class="toc-text"> 大小写转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.5.</span> <span class="toc-text"> 字符串拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83"><span class="toc-number">1.6.</span> <span class="toc-text"> 字符串比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E5%89%B2"><span class="toc-number">1.7.</span> <span class="toc-text"> 字符串分割</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/4081569272/" title="《悲剧的诞生》读书笔记"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20221122200546.png" onerror="this.onerror=null;this.src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="《悲剧的诞生》读书笔记"/></a><div class="content"><a class="title" href="/posts/4081569272/" title="《悲剧的诞生》读书笔记">《悲剧的诞生》读书笔记</a><time datetime="2022-10-24T15:24:06.000Z" title="发表于 2022-10-24 23:24:06">2022-10-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/1364342167/" title="JavaWeb笔记"><img src="https://bu.dusays.com/2022/09/01/63103c8a03a24.webp" onerror="this.onerror=null;this.src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="JavaWeb笔记"/></a><div class="content"><a class="title" href="/posts/1364342167/" title="JavaWeb笔记">JavaWeb笔记</a><time datetime="2022-09-15T12:41:35.000Z" title="发表于 2022-09-15 20:41:35">2022-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/16977/" title="MySql基础"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220729003418.png" onerror="this.onerror=null;this.src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="MySql基础"/></a><div class="content"><a class="title" href="/posts/16977/" title="MySql基础">MySql基础</a><time datetime="2022-07-13T02:55:52.000Z" title="发表于 2022-07-13 10:55:52">2022-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/46395/" title="算法基础笔记"><img src="https://bu.dusays.com/2022/09/01/63103c8a03a24.webp" onerror="this.onerror=null;this.src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="算法基础笔记"/></a><div class="content"><a class="title" href="/posts/46395/" title="算法基础笔记">算法基础笔记</a><time datetime="2022-07-07T07:03:07.000Z" title="发表于 2022-07-07 15:03:07">2022-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/3942644093/" title="大一下学期总结"><img src="https://kaguranotamashii-1308648145.cos.ap-beijing.myqcloud.com/20220804115834.png" onerror="this.onerror=null;this.src='https://bu.dusays.com/2022/09/01/63103d8f14652.webp'" alt="大一下学期总结"/></a><div class="content"><a class="title" href="/posts/3942644093/" title="大一下学期总结">大一下学期总结</a><time datetime="2022-07-06T16:37:29.000Z" title="发表于 2022-07-07 00:37:29">2022-07-07</time></div></div></div></div><div class="card-widget card-weather" style="width:100%,height:270px"><div class="item-headline"><i class="fas fa-cloud-sun"></i><span>天气</span></div><div id="he-plugin-standard"></div><script>WIDGET = {
+  "CONFIG": {
+    "layout": "2",
+    "width": 270,
+    "height": 270,
+    "background": "5",
+    "dataColor": "000000",
+    "key": "170186298b184055bafbb4d30e4322a7"
+  }
+}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="social-icons"></div><div class="copyright">&copy;2021 - 2022 By 神楽の魂の小窝</div><div class="framework-info"><span class="footer-separator"> </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo-blue"/></a><span class="footer-separator"> </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly"><img src="https://img.shields.io/badge/Theme-Butterfly-informational"/></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i><a id="switch_commentBarrage" href="javascript:switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕"><i class="iconfont icon-danmu"></i></a></a><a id="opensettings" href="javascript:toggleWinbox();" rel="external nofollow noreferrer" title="博客设置"><i class="fa fa-cog"></i></a><button id="go-up" type="button" title="回到顶部" onclick="rmf.scrollToTop()"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();" rel="external nofollow noreferrer"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();" rel="external nofollow noreferrer"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();" rel="external nofollow noreferrer"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();" rel="external nofollow noreferrer"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();" rel="external nofollow noreferrer"><i class="iconfont icon-baidu"></i><span>百度搜索</span></a><a class="rightMenu-item" href="#post-comment" onclick="rmf.yinyong()"><i class="fa-solid fa-message"></i><span>引用文本评论</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:switchCommentBarrage()" rel="external nofollow noreferrer"><i class="fa fa-bell-slash"></i><span>开/关评论弹幕</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()" rel="external nofollow noreferrer"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()" rel="external nofollow noreferrer"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()" rel="external nofollow noreferrer"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()" rel="external nofollow noreferrer"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.click()" rel="external nofollow noreferrer"><i class="fa fa-arrows-alt"></i><span>全屏显示</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()" rel="external nofollow noreferrer"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:toRandomPost()" rel="external nofollow noreferrer"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:rmf.switchDarkMode();" rel="external nofollow noreferrer"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="javascript:rmf.translate();" rel="external nofollow noreferrer"><i class="iconfont icon-fanti"></i><span>繁简转换</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();" rel="external nofollow noreferrer"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="javascript:window.location.href=&quot;/license/&quot;;" rel="external nofollow noreferrer"><i class="fa fa-info-circle"></i><span>版权声明</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();" rel="external nofollow noreferrer"><i class="fas fa-cog"></i><span>博客设置</span></a></div></div><div><script src="https://npm.elemecdn.com/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn1.tianli0.top/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn1.tianli0.top/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+    setTimeout(function(){document.getElementById('loading-box').classList.add("loadend")},700)
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>(()=>{
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
       envId: 'https://twikoo-pk3f7hhfc-kaguranotamashii.vercel.app/',
       region: '',
       onCommentLoaded: function () {
-        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.vemoji)'))
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
     }, null))
   }
 
   const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
     twikoo.getCommentsCount({
       envId: 'https://twikoo-pk3f7hhfc-kaguranotamashii.vercel.app/',
       region: '',
       urls: [window.location.pathname],
-      includeReply: false
+      includeReply: true
     }).then(function (res) {
-      document.getElementById('twikoo-count').innerText = res[0].count
+      countELement.innerText = res[0].count
     }).catch(function (err) {
       console.error(err);
     });
@@ -180,7 +231,7 @@
 
   const runFn = () => {
     init()
-    
+    GLOBAL_CONFIG_SITE.isPost && getCount()
   }
 
   const loadTwikoo = () => {
@@ -188,7 +239,7 @@
       setTimeout(runFn,0)
       return
     } 
-    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+    getScript('https://cdn1.tianli0.top/npm/twikoo@1/dist/twikoo.all.min.js').then(runFn)
   }
 
   if ('Twikoo' === 'Twikoo' || !false) {
@@ -199,20 +250,270 @@
       loadTwikoo()
     }
   }
-})()</script></div><script src="/js/modify.js"></script><canvas id="universe"></canvas><script defer="" src="/js/universe.js"></script><script defer="" src="/js/universe_dark.js"></script><script src="/js/sun_moon.js" async=""></script><script defer="" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script defer="" data-pjax="" src="/js/rightMenu.js"></script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax="">if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
-    var parent = document.getElementById('recent-posts');
-    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://kaguranotamashii.github.io/categories/编程/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">📚 神乐的编程 (11)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://kaguranotamashii.github.io/categories/闲聊杂谈/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🎮 神乐的生活趣闻 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://kaguranotamashii.github.io/categories/个人博客/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">👩‍💻 神乐的博客 (2)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item" style="visibility: hidden"></div><a class="magnet_link_more"  href="https://kaguranotamashii.github.io/categories" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
-    console.log('已挂载magnet')
-    parent.insertAdjacentHTML("afterbegin",child)}
-     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #b30070}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
-    <style></style><script data-pjax="">
-  function butterfly_clock_injector_config(){
-    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
-    console.log('已挂载butterfly_clock')
-    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+})()</script><script>var gitcalendar = new Vue({
+  el: '#gitcalendar',
+  data: {
+    simplemode: false,
+    user: 'LYXOfficial',
+    fixed: 'fixed',
+    px: 'px',
+    x: '',
+    y: '',
+    span1: '',
+    span2: '',
+    month: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+    monthchange: [],
+    oneyearbeforeday: '',
+    thisday: '',
+    amonthago: '',
+    aweekago: '',
+    weekdatacore: 0,
+    datacore: 0,
+    total: 0,
+    datadate: '',
+    data: [],
+    positionplusdata: [],
+    firstweek: [],
+    lastweek: [],
+    beforeweek: [],
+    thisweekdatacore: 0,
+    mounthbeforeday: 0,
+    mounthfirstindex: 0,
+    crispedges: 'crispedges',
+    thisdayindex: 0,
+    amonthagoindex: 0,
+    amonthagoweek: [],
+    firstdate: [],
+    first2date: [],
+    montharrbefore: [],
+    monthindex: 0,
+    color: ['#ebedf0', '#f1f8ff', '#dbedff', '#c8e1ff', '#79b8ff', '#2188ff', '#0366d6', '#005cc5', '#044289', '#032f62', '#05264c']
+  },
+  methods: {
+    selectStyle(data, event) {
+      document.querySelector('.angle-wrapper').style.display = 'block'
+      this.span1 = data.date;
+      this.span2 = data.count;
+      this.x = event.clientX - 100;
+      this.y = event.clientY - 60
+    },
+    outStyle() {
+      document.querySelector('.angle-wrapper').style.display = 'none'
+    },
+    thiscolor(x) {
+      if (x === 0) {
+        let i = parseInt(x / 2);
+        return this.color[0]
+      } else if (x < 2) {
+        return this.color[1]
+      } else if (x < 20) {
+        let i = parseInt(x / 2);
+        return this.color[i]
+      } else {
+        return this.color[9]
+      }
+    },
+  }
+});
+var apiurl = 'gcapi.yisous.xyz' ? 'https://gcapi.yisous.xyz/api?' : 'https://githubapi.ryanchristian.dev/user/'
+var githubapiurl = apiurl + gitcalendar.user;
+//canvas绘图
+function responsiveChart() {
+  let c = document.getElementById("gitcanvas");
+  if (c) {
+    let cmessage = document.getElementById("gitmessage");
+    let ctx = c.getContext("2d");
+    c.width = document.getElementById("gitcalendarcanvasbox").offsetWidth;
+    let linemaxwitdh = 0.96 * c.width / gitcalendar.data.length;
+    c.height = 9 * linemaxwitdh;
+    let lineminwitdh = 0.8 * linemaxwitdh;
+    let setposition = {
+      x: 0.02 * c.width,
+      y: 0.025 * c.width
+    };
+    for (let week in gitcalendar.data) {
+      weekdata = gitcalendar.data[week];
+      for (let day in weekdata) {
+        let dataitem = {
+          date: "",
+          count: "",
+          x: 0,
+          y: 0
+        };
+        gitcalendar.positionplusdata.push(dataitem);
+        ctx.fillStyle = gitcalendar.thiscolor(weekdata[day].count);
+        setposition.y = Math.round(setposition.y * 100) / 100;
+        dataitem.date = weekdata[day].date;
+        dataitem.count = weekdata[day].count;
+        dataitem.x = setposition.x;
+        dataitem.y = setposition.y;
+        ctx.fillRect(setposition.x, setposition.y, lineminwitdh, lineminwitdh);
+        setposition.y = setposition.y + linemaxwitdh
+      };
+      setposition.y = 0.025 * c.width;
+      setposition.x = setposition.x + linemaxwitdh
+    };
+    ctx.font = "600  Arial";
+    ctx.fillStyle = '#aaa';
+    ctx.fillText("日", 0, 1.9 * linemaxwitdh);
+    ctx.fillText("二", 0, 3.9 * linemaxwitdh);
+    ctx.fillText("四", 0, 5.9 * linemaxwitdh);
+    ctx.fillText("六", 0, 7.9 * linemaxwitdh);
+    let monthindexlist = c.width / 24;
+    for (let index in gitcalendar.monthchange) {
+      ctx.fillText(gitcalendar.monthchange[index], monthindexlist, 0.7 * linemaxwitdh);
+      monthindexlist = monthindexlist + c.width / 12
+    };
+    cmessage.onmousemove = function(event) {
+      document.querySelector('.angle-wrapper').style.display = 'none'
+    };
+    c.onmousemove = function(event) {
+      document.querySelector('.angle-wrapper').style.display = 'none'
+      getMousePos(c, event);
+    };
+
+    function getMousePos(canvas, event) {
+      var rect = canvas.getBoundingClientRect();
+      var x = event.clientX - rect.left * (canvas.width / rect.width);
+      var y = event.clientY - rect.top * (canvas.height / rect.height);
+      //console.log("x:"+x+",y:"+y);
+      for (let item of gitcalendar.positionplusdata) {
+        let lenthx = x - item.x;
+        let lenthy = y - item.y;
+        //console.log(lenthx,lenthy);
+        if (0 < lenthx && lenthx < lineminwitdh) {
+          if (0 < lenthy && lenthy < lineminwitdh) {
+            //console.log(item.date,item.count)
+            document.querySelector('.angle-wrapper').style.display = 'block'
+            gitcalendar.span1 = item.date;
+            gitcalendar.span2 = item.count;
+            gitcalendar.x = event.clientX - 100;
+            gitcalendar.y = event.clientY - 60
+          }
+        }
+        //if(0< x - item.x <lineminwitdh&&0< y - item.y <lineminwitdh){
+        //console.log(item.count,item.date);
+        //}
+      }
     }
-  var elist = 'null'.split(',');
+  }
+}
+//数据统计算法
+function addlastmonth() {
+  if (gitcalendar.thisdayindex === 0) {
+    thisweekcore(52);
+    thisweekcore(51);
+    thisweekcore(50);
+    thisweekcore(49);
+    thisweekcore(48);
+    gitcalendar.thisweekdatacore += gitcalendar.firstdate[6].count;
+    gitcalendar.amonthago = gitcalendar.firstdate[6].date
+  } else {
+    thisweekcore(52);
+    thisweekcore(51);
+    thisweekcore(50);
+    thisweekcore(49);
+    thisweek2core();
+    gitcalendar.amonthago = gitcalendar.first2date[gitcalendar.thisdayindex - 1].date
+  }
+};
+
+function thisweek2core() {
+  for (let i = gitcalendar.thisdayindex - 1; i < gitcalendar.first2date.length; i++) {
+    gitcalendar.thisweekdatacore += gitcalendar.first2date[i].count
+  }
+};
+
+function thisweekcore(index) {
+  for (let item of gitcalendar.data[index]) {
+    gitcalendar.thisweekdatacore += item.count
+  }
+};
+
+function addlastweek() {
+  for (let item of gitcalendar.lastweek) {
+    gitcalendar.weekdatacore += item.count
+  }
+};
+
+function addbeforeweek() {
+  for (let i = gitcalendar.thisdayindex; i < gitcalendar.beforeweek.length; i++) {
+    gitcalendar.weekdatacore += gitcalendar.beforeweek[i].count
+  }
+};
+
+function addweek(data) {
+  if (gitcalendar.thisdayindex === 6) {
+    gitcalendar.aweekago = gitcalendar.lastweek[0].date;
+    addlastweek()
+  } else {
+    lastweek = data.contributions[51];
+    gitcalendar.aweekago = lastweek[gitcalendar.thisdayindex + 1].date;
+    addlastweek();
+    addbeforeweek()
+  }
+}
+
+fetch(githubapiurl)
+  .then(data => data.json())
+  .then(data => {
+    gitcalendar.data = data.contributions;
+    gitcalendar.total = data.total;
+    gitcalendar.first2date = gitcalendar.data[48];
+    gitcalendar.firstdate = gitcalendar.data[47];
+    gitcalendar.firstweek = data.contributions[0];
+    gitcalendar.lastweek = data.contributions[52];
+    gitcalendar.beforeweek = data.contributions[51];
+    gitcalendar.thisdayindex = gitcalendar.lastweek.length - 1;
+    gitcalendar.thisday = gitcalendar.lastweek[gitcalendar.thisdayindex].date;
+    gitcalendar.oneyearbeforeday = gitcalendar.firstweek[0].date;
+    gitcalendar.monthindex = gitcalendar.thisday.substring(5, 7) * 1;
+    gitcalendar.montharrbefore = gitcalendar.month.splice(gitcalendar.monthindex, 12 - gitcalendar.monthindex);
+    gitcalendar.monthchange = gitcalendar.montharrbefore.concat(gitcalendar.month);
+    addweek(data);
+    addlastmonth();
+    responsiveChart();
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+
+//手机版更换为svg绘制
+if (document.getElementById("gitcalendarcanvasbox").offsetWidth < 500) {
+  gitcalendar.simplemode = false
+}
+
+//当改变窗口大小时重新绘制canvas
+window.onresize = function() {
+  if (gitcalendar.simplemode) responsiveChart()
+}
+
+//解决滚动滑轮时出现的标签显示
+window.onscroll = function() {
+  if (document.querySelector('.angle-wrapper')) {
+    document.querySelector('.angle-wrapper').style.display = 'none'
+  }
+};</script></div><div class="aplayer no-destroy" data-id="7761042516" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" volume=0.2 style="z-index:514"> </div><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/katex@0.10.1/dist/katex.min.css"><script defer src="https://cdn1.tianli0.top/npm/katex@0.10.1/dist/katex.min.js"></script><script type="text/javascript" src="/js/noie.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script><script type="text/javascript" src="/js/resizeTop.js"></script><script type="text/javascript" src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/calendar.js"></script><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script><script src="https://cdn1.tianli0.top/npm/swiper/swiper-bundle.min.js"></script><script src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/baiduhistory.js"></script><script src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/random.js"></script><script src="https://cdn1.tianli0.top/gh/LYXOfficial/LYXOfficial.github.io/js/lunar.js"></script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/aplayer@1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn1.tianli0.top/npm/aplayer@1/dist/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="https://cdn.dusays.com/bsz.js"></script><div id="fixedcard-dashboard"><button class="fixedcard-activebtn" type="button" title="我的信息" onclick="FixedCardWidget(&quot;class&quot;,&quot;card-info&quot;,&quot;0&quot;)"><i class="fas fa-address-book"></i></button><button class="fixedcard-activebtn" type="button" title="公告" onclick="FixedCardWidget(&quot;class&quot;,&quot;card-announcement&quot;,&quot;0&quot;)"><i class="fas fa-bullhorn"></i></button><button class="fixedcard-activebtn" type="button" title="天气" onclick="FixedCardWidget(&quot;class&quot;,&quot;card-weather&quot;,&quot;0&quot;)"><i class="fas fa-cloud-sun"></i></button><button class="fixedcard-activebtn" type="button" title="最新文章" onclick="FixedCardWidget(&quot;class&quot;,&quot;card-recent-post&quot;,&quot;0&quot;)"><i class="fas fa-history"></i></button><button class="fixedcard-activebtn" type="button" title="最新评论" onclick="FixedCardWidget(&quot;id&quot;,&quot;card-newest-comments&quot;,&quot;0&quot;)"><i class="fas fa-comment-dots"></i></button><button class="fixedcard-activebtn" type="button" title="文章日历" onclick="FixedCardWidget(&quot;class&quot;,&quot;card-calendar&quot;,&quot;0&quot;)"><i class="fas fa-calendar"></i></button><div class="fixedcard-user-avatar fixedcard-activebtn" onclick="RemoveFixedCardWidget()"><img class="fixedcard-user-avatar-img" src="/img/a.webp" title="神楽の魂の小窝"></div></div></div><link rel="stylesheet" href="/css/commentBarrage.css"><script src="/js/commentBarrage.js"></script><!-- hexo injector body_end start --><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span>碎碎念</span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'uglz6tnJasD6sm9qHMVU1oJk-MdYXbMMI',
+          appKey: 'UYbIjFxE6uFOHkNjLCUxHf6R',
+        }, {"serverURL":"https://uglz6tnJ.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#49b1f5","color2":"#00c4b6","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/artitalk/,/speaks/,/posts/'.split(',');
   var cpage = location.pathname;
   var epage = 'all';
   var flag = 0;
@@ -224,9 +525,33 @@
   }
 
   if ((epage ==='all')&&(flag == 0)){
-    butterfly_clock_injector_config();
+    card_artitalk_injector_config();
   }
   else if (epage === cpage){
-    butterfly_clock_injector_config();
+    card_artitalk_injector_config();
   }
-  </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax="" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/clock.min.js"></script><script async="" src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementsByClassName('swiper-div')[0];
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://cdn1.tianli0.top/npm/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://cdn1.tianli0.top/npm/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
